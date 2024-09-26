@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+area,
+menu,
+ul,
+a {
+  all: unset;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-acrom-regular);
+  min-height: 100dvh;
+  min-width: 100%;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
