@@ -5,7 +5,7 @@
   --font-acrom-bold: "AcromBold";
 
   //colors
-  --color-font-main: rgba(0, 0, 0, 1);
+  --color-font-black: rgba(0, 0, 0, 1);
   --color-font-dark-blue: rgba(15, 10, 51, 1);
   --color-font-blue: rgba(8, 4, 35, 1);
   --color-font-light-gray: rgba(197, 197, 197, 1);
@@ -28,7 +28,6 @@
 
   --color-border-translucent: rgba(21, 21, 21, 0.28);
   --color-border-pink: rgba(255, 61, 129, 1);
-  --color-border-translucent: rgba(21, 21, 21, 0.28);
 
   //size
   --size-font-title-big: 80px;
@@ -38,4 +37,8 @@
   --size-font-big: 20px;
   --size-font-normal: 18px;
   --size-font-small: 16px;
+
+  //radius
+  --border-radius-image: 10px;
+  --border-radius-button: 60px;
 }
