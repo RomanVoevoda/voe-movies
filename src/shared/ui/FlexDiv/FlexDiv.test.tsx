@@ -71,4 +71,13 @@ describe("FlexDiv", () => {
       render({ wrap: "nowrap" }, "flex_nowrap");
     });
   });
+
+  describe("gap", () => {
+    test("gap", () => {
+      const gapValue = 20;
+      render({ gap: gapValue }, "flex");
+      const component = screen.getByTestId("FlexDiv");
+      expect(component).toHaveStyle(`gap: ${gapValue}px`);
+    });
+  });
 });
