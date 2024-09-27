@@ -1,0 +1,89 @@
+.text {
+  &_color_black {
+    color: var(--color-font-black);
+  }
+
+  &_color_dark_blue {
+    color: var(--color-font-dark-blue);
+  }
+
+  &_color_blue {
+    color: var(--color-font-blue);
+  }
+
+  &_color_light_gray {
+    color: var(--color-font-light-gray);
+  }
+
+  &_color_gray {
+    color: var(--color-font-gray);
+  }
+
+  &_color_yellow {
+    color: var(--color-font-yellow);
+  }
+
+  &_color_white {
+    color: var(--color-font-white);
+  }
+
+  &_color_pink {
+    color: var(--color-font-pink);
+  }
+
+  &_color_transcluent {
+    color: var(--color-font-translucent);
+  }
+
+  &_align_start {
+    text-align: start;
+  }
+
+  &_align_center {
+    text-align: center;
+  }
+
+  &_align_end {
+    text-align: end;
+  }
+
+  &_family_regular {
+    font-family: var(--font-acrom-regular);
+  }
+
+  &_family_medium {
+    font-family: var(--font-acrom-medium);
+  }
+
+  &_family_bold {
+    font-family: var(--font-acrom-bold);
+  }
+
+  &_size_small {
+    font-size: var(--size-font-small);
+  }
+
+  &_size_normal {
+    font-size: var(--size-font-normal);
+  }
+
+  &_size_big {
+    font-size: var(--size-font-big);
+  }
+
+  &_size_banners_small {
+    font-size: var(--size-font-banners-small);
+  }
+
+  &_size_banners_big {
+    font-size: var(--size-font-banners-big);
+  }
+
+  &_size_titles_small {
+    font-size: var(--size-font-title-small);
+  }
+
+  &_size_titles_big {
+    font-size: var(--size-font-title-big);
+  }
+}
