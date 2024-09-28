@@ -1,0 +1,52 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_gray {
+    fill: var(--color-btn-gray);
+  }
+
+  &_transcluent {
+    fill: var(--color-btn-translucent);
+  }
+
+  &_white {
+    fill: var(--color-btn-white);
+  }
+
+  &_dark_blue {
+    fill: var(--color-btn-dark-blue);
+  }
+
+  &_small {
+    width: 20px;
+    height: 20px;
+  }
+
+  &_normal {
+    width: 28px;
+    height: 28px;
+  }
+
+  &_big {
+    width: 30px;
+    height: 30px;
+  }
+
+  &_bottom {
+    /*This should be default direction of all icons*/
+  }
+
+  &_right {
+    transform: rotate(-90deg);
+  }
+
+  &_top {
+    transform: rotate(180deg);
+  }
+
+  &_left {
+    transform: rotate(90deg);
+  }
+}
