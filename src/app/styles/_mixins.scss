@@ -1,20 +1,16 @@
-@mixin interactive($colorProperty, $color, $percent, $scale) {
+@mixin interactiveColor($colorProperty, $color, $percent) {
   @media (hover: hover) {
     &:hover {
       #{$colorProperty}: lighten($color, $percent);
-      cursor: pointer;
-      scale: $scale;
     }
     &:active {
       #{$colorProperty}: darken($color, $percent);
-      scale: 1;
     }
   }
 
   @media (hover: none) {
     &:active {
-      #{$colorProperty}: lighten($color, $percent);
-      scale: $scale;
+      #{$colorProperty}: darken($color, $percent);
     }
   }
 }
