@@ -1,22 +1,50 @@
+@mixin iconColor($color) {
+  fill: $color;
+
+  &_interactive {
+    @include interactiveColor(fill, $color, 20%);
+  }
+}
+
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
 
+  &_interactive {
+    transition:
+      scale 0.3s ease,
+      fill 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        scale: 1.05;
+      }
+
+      &:active {
+        scale: 1;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        scale: 1.05;
+      }
+    }
+  }
+
   &_gray {
-    fill: $color-btn-gray;
+    @include iconColor($color-btn-gray);
   }
-
-  &_transcluent {
-    fill: $color-btn-translucent;
+  &_translucent {
+    @include iconColor($color-btn-translucent);
   }
-
   &_white {
-    fill: $color-btn-white;
+    @include iconColor($color-btn-white);
   }
-
   &_dark_blue {
-    fill: $color-btn-dark-blue;
+    @include iconColor($color-btn-dark-blue);
   }
 
   &_small {
@@ -35,7 +63,7 @@
   }
 
   &_bottom {
-    /*This should be default direction of all icons*/
+    /* This should be default direction of all icons */
   }
 
   &_right {

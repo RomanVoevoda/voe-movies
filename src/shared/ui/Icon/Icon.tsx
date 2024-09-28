@@ -11,6 +11,7 @@ const Icon: FC<IconFactoryProps> = ({
   color = "gray",
   size = "small",
   direction = "bottom",
+  interactive,
   ariaLabel,
   onClick,
 }) => {
@@ -20,6 +21,8 @@ const Icon: FC<IconFactoryProps> = ({
     [styles[`icon_${color}`]]: color,
     [styles[`icon_${size}`]]: size,
     [styles[`icon_${direction}`]]: direction,
+    [styles[`icon_${color}_interactive`]]: interactive,
+    [styles[`icon_interactive`]]: interactive,
   });
 
   const iconProps = {

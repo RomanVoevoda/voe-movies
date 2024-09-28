@@ -39,7 +39,15 @@ export const AngleNormalLeftIcon: Story = {
 export const SearchIcon: Story = {
   args: {
     type: "search",
-    color: "transcluent",
+    color: "translucent",
     size: "small",
+  },
+};
+
+export const InteractiveIcon: Story = {
+  args: {
+    color: "translucent",
+    size: "big",
+    interactive: true,
   },
 };

@@ -2,7 +2,10 @@
   display: flex;
   justify-content: center;
   border-radius: $border-radius-button;
-  transition: transform 0.2s ease;
+  transition:
+    scale 0.5s ease,
+    color 1s ease,
+    background-color 1s ease;
   font-size: $size-font-normal;
   font-family: $font-acrom-medium;
   border: none;
@@ -11,17 +14,17 @@
   @media (hover: hover) {
     &:hover {
       cursor: pointer;
-      transform: scale(1.02, 1.02);
+      scale: 1.02;
     }
 
     &:active {
-      transform: scale(1, 1);
+      scale: 1;
     }
   }
 
   @media (hover: none) {
     &:active {
-      transform: scale(1.02, 1.02);
+      scale: 1.02;
     }
   }
 
@@ -30,10 +33,12 @@
 
     &_pink {
       background-color: $color-btn-pink;
+      @include interactiveColor(background-color, $color-btn-pink, 5%);
     }
 
     &_dark_blue {
       background-color: $color-btn-dark-blue;
+      @include interactiveColor(background-color, $color-btn-dark-blue, 5%);
     }
   }
 
@@ -44,48 +49,16 @@
       color: $color-font-pink;
       border: 1px solid $color-btn-pink;
 
-      @media (hover: hover) {
-        &:hover {
-          color: $color-font-white;
-          background-color: $color-btn-pink;
-        }
-
-        &:active {
-          color: $color-font-pink;
-          background-color: transparent;
-        }
-      }
-
-      @media (hover: none) {
-        &:active {
-          color: $color-font-white;
-          background-color: $color-btn-pink;
-        }
-      }
+      @include interactiveColor(color, $color-font-white, 5%);
+      @include interactiveColor(background-color, $color-btn-pink, 5%);
     }
 
     &_dark_blue {
       color: $color-btn-dark-blue;
       border: 1px solid $color-btn-dark-blue;
 
-      @media (hover: hover) {
-        &:hover {
-          color: $color-font-white;
-          background-color: $color-btn-dark-blue;
-        }
-
-        &:active {
-          color: $color-btn-dark-blue;
-          background-color: transparent;
-        }
-      }
-
-      @media (hover: none) {
-        &:active {
-          color: $color-font-white;
-          background-color: $color-btn-dark-blue;
-        }
-      }
+      @include interactiveColor(color, $color-font-white, 5%);
+      @include interactiveColor(background-color, $color-btn-dark-blue, 5%);
     }
   }
 
@@ -94,10 +67,12 @@
 
     &_pink {
       color: $color-font-pink;
+      @include interactiveColor(color, $color-font-pink, 5%);
     }
 
     &_dark_blue {
       color: $color-font-dark_blue;
+      @include interactiveColor(color, $color-font-dark_blue, 5%);
     }
   }
 }

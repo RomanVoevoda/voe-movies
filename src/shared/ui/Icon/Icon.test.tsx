@@ -22,6 +22,13 @@ describe("Icon", () => {
     expect(component).toHaveClass("icon_gray");
     expect(component).toHaveClass("icon_small");
     expect(component).toHaveClass("icon_bottom");
+    expect(component).not.toHaveClass("icon_interactive");
+  });
+
+  describe("interactive", () => {
+    test("interactive", () => {
+      render({ interactive: true }, "angle-icon", "icon_interactive");
+    });
   });
 
   describe("type", () => {
@@ -46,8 +53,8 @@ describe("Icon", () => {
       render({ color: "gray" }, "angle-icon", "icon_gray");
     });
 
-    test("transcluent", () => {
-      render({ color: "transcluent" }, "angle-icon", "icon_transcluent");
+    test("translucent", () => {
+      render({ color: "translucent" }, "angle-icon", "icon_translucent");
     });
 
     test("white", () => {
