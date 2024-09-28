@@ -4,19 +4,19 @@
   align-items: center;
 
   &_gray {
-    fill: var(--color-btn-gray);
+    fill: $color-btn-gray;
   }
 
   &_transcluent {
-    fill: var(--color-btn-translucent);
+    fill: $color-btn-translucent;
   }
 
   &_white {
-    fill: var(--color-btn-white);
+    fill: $color-btn-white;
   }
 
   &_dark_blue {
-    fill: var(--color-btn-dark-blue);
+    fill: $color-btn-dark-blue;
   }
 
   &_small {

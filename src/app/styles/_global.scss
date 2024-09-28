@@ -21,8 +21,8 @@ button {
 
 body {
   box-sizing: border-box;
-  font-family: var(--font-acrom-regular);
-  color: var(--color-font-black);
+  font-family: $font-acrom-regular;
+  color: $color-font-black;
   min-height: 100dvh;
   min-width: 100%;
 }

@@ -1,10 +1,10 @@
 .button {
   display: flex;
   justify-content: center;
-  border-radius: var(--border-radius-button);
+  border-radius: $border-radius-button;
   transition: transform 0.2s ease;
-  font-size: var(--size-font-normal);
-  font-family: var(--font-acrom-medium);
+  font-size: $size-font-normal;
+  font-family: $font-acrom-medium;
   border: none;
   padding: 10px 45px;
 
@@ -26,14 +26,14 @@
   }
 
   &_contained {
-    color: var(--color-font-white);
+    color: $color-font-white;
 
     &_pink {
-      background-color: var(--color-btn-pink);
+      background-color: $color-btn-pink;
     }
 
     &_dark_blue {
-      background-color: var(--color-btn-dark-blue);
+      background-color: $color-btn-dark-blue;
     }
   }
 
@@ -41,49 +41,49 @@
     background-color: transparent;
 
     &_pink {
-      color: var(--color-font-pink);
-      border: 1px solid var(--color-btn-pink);
+      color: $color-font-pink;
+      border: 1px solid $color-btn-pink;
 
       @media (hover: hover) {
         &:hover {
-          color: var(--color-font-white);
-          background-color: var(--color-btn-pink);
+          color: $color-font-white;
+          background-color: $color-btn-pink;
         }
 
         &:active {
-          color: var(--color-font-pink);
+          color: $color-font-pink;
           background-color: transparent;
         }
       }
 
       @media (hover: none) {
         &:active {
-          color: var(--color-font-white);
-          background-color: var(--color-btn-pink);
+          color: $color-font-white;
+          background-color: $color-btn-pink;
         }
       }
     }
 
     &_dark_blue {
-      color: var(--color-btn-dark-blue);
-      border: 1px solid var(--color-btn-dark-blue);
+      color: $color-btn-dark-blue;
+      border: 1px solid $color-btn-dark-blue;
 
       @media (hover: hover) {
         &:hover {
-          color: var(--color-font-white);
-          background-color: var(--color-btn-dark-blue);
+          color: $color-font-white;
+          background-color: $color-btn-dark-blue;
         }
 
         &:active {
-          color: var(--color-btn-dark-blue);
+          color: $color-btn-dark-blue;
           background-color: transparent;
         }
       }
 
       @media (hover: none) {
         &:active {
-          color: var(--color-font-white);
-          background-color: var(--color-btn-dark-blue);
+          color: $color-font-white;
+          background-color: $color-btn-dark-blue;
         }
       }
     }
@@ -93,11 +93,11 @@
     background-color: transparent;
 
     &_pink {
-      color: var(--color-font-pink);
+      color: $color-font-pink;
     }
 
     &_dark_blue {
-      color: var(--color-font-dark_blue);
+      color: $color-font-dark_blue;
     }
   }
 }

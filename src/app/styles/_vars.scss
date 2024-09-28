@@ -1,46 +1,44 @@
-:root {
-  //fonts
-  --font-acrom-regular: "AcromRegular";
-  --font-acrom-medium: "AcromMedium";
-  --font-acrom-bold: "AcromBold";
+//fonts
+$font-acrom-regular: "AcromRegular";
+$font-acrom-medium: "AcromMedium";
+$font-acrom-bold: "AcromBold";
 
-  //colors
-  --color-font-black: rgba(0, 0, 0, 1);
-  --color-font-blue: rgba(15, 10, 51, 1);
-  --color-font-dark-blue: rgba(8, 4, 35, 1);
-  --color-font-light-gray: rgba(197, 197, 197, 1);
-  --color-font-gray: rgba(122, 122, 122, 1);
-  --color-font-yellow: rgba(255, 210, 51, 1);
-  --color-font-white: rgba(255, 255, 255, 1);
-  --color-font-pink: rgba(255, 61, 129, 1);
-  --color-font-translucent: rgba(21, 21, 21, 0.28);
+//colors
+$color-font-black: rgba(0, 0, 0, 1);
+$color-font-blue: rgba(15, 10, 51, 1);
+$color-font-dark-blue: rgba(8, 4, 35, 1);
+$color-font-light-gray: rgba(197, 197, 197, 1);
+$color-font-gray: rgba(122, 122, 122, 1);
+$color-font-yellow: rgba(255, 210, 51, 1);
+$color-font-white: rgba(255, 255, 255, 1);
+$color-font-pink: rgba(255, 61, 129, 1);
+$color-font-translucent: rgba(21, 21, 21, 0.28);
 
-  --color-btn-dark-blue: rgba(8, 4, 35, 1);
-  --color-btn-gray: rgba(122, 122, 122, 1);
-  --color-btn-blue: rgba(15, 10, 51, 1);
-  --color-btn-pink: rgba(255, 61, 129, 1);
-  --color-btn-translucent: rgba(21, 21, 21, 0.28);
-  --color-btn-white: rgba(255, 255, 255, 1);
+$color-btn-dark-blue: rgba(8, 4, 35, 1);
+$color-btn-gray: rgba(122, 122, 122, 1);
+$color-btn-blue: rgba(15, 10, 51, 1);
+$color-btn-pink: rgba(255, 61, 129, 1);
+$color-btn-translucent: rgba(21, 21, 21, 0.28);
+$color-btn-white: rgba(255, 255, 255, 1);
 
-  --color-skeleton: rgba(217, 217, 217, 1);
+$color-skeleton: rgba(217, 217, 217, 1);
 
-  --color-background-main: rgba(255, 255, 255, 1);
-  --color-background-dark-blue: rgba(8, 4, 35, 1);
-  --color-background-black: rgba(0, 0, 0, 1);
+$color-background-main: rgba(255, 255, 255, 1);
+$color-background-dark-blue: rgba(8, 4, 35, 1);
+$color-background-black: rgba(0, 0, 0, 1);
 
-  --color-border-translucent: rgba(21, 21, 21, 0.28);
-  --color-border-pink: rgba(255, 61, 129, 1);
+$color-border-translucent: rgba(21, 21, 21, 0.28);
+$color-border-pink: rgba(255, 61, 129, 1);
 
-  //size
-  --size-font-title-big: 80px;
-  --size-font-title-small: 60px;
-  --size-font-banners-big: 30px;
-  --size-font-banners-small: 24px;
-  --size-font-big: 20px;
-  --size-font-normal: 18px;
-  --size-font-small: 16px;
+//size
+$size-font-title-big: 80px;
+$size-font-title-small: 60px;
+$size-font-banners-big: 30px;
+$size-font-banners-small: 24px;
+$size-font-big: 20px;
+$size-font-normal: 18px;
+$size-font-small: 16px;
 
-  //radius
-  --border-radius-image: 10px;
-  --border-radius-button: 60px;
-}
+//radius
+$border-radius-image: 10px;
+$border-radius-button: 60px;

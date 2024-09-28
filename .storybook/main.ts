@@ -8,10 +8,16 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/addon-styling-webpack",
   ],
   framework: {
     name: "@storybook/nextjs",
-    options: {},
+    options: {
+      sass: {
+        implementation: require("sass"),
+        additionalData: `@import "~@styles/_vars.scss";`,
+      },
+    },
   },
 };
 export default config;
