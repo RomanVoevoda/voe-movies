@@ -35,3 +35,8 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+input,
+select {
+  outline: none;
+}

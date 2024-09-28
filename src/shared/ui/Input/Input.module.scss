@@ -1,0 +1,33 @@
+.input {
+  border-radius: $border-radius-button;
+  color: $color-font-dark-blue;
+  box-shadow: $box-shadow-base;
+  border: none;
+  font-family: $font-acrom-regular;
+
+  &_normal {
+    width: 400px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: $size-font-small;
+  }
+
+  &:focus {
+    border: 2px solid $color-border-translucent;
+    box-shadow: $box-shadow-inset;
+  }
+
+  &[type="search"] {
+    &::-webkit-search-cancel-button {
+      -webkit-transition: scale 0.2s ease;
+      transition: scale 0.2s ease;
+
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+          scale: 1.05;
+        }
+      }
+    }
+  }
+}
