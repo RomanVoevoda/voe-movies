@@ -2,7 +2,7 @@
 const nextConfig = {
   sassOptions: {
     includePaths: ["./src"],
-    prependData: `@import "~@styles/_vars.scss"; `,
+    prependData: `@import "~@styles/_vars.scss"; @import "~@styles/_mixins.scss";`,
   },
 };
 

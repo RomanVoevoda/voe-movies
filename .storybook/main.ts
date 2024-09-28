@@ -15,7 +15,7 @@ const config: StorybookConfig = {
     options: {
       sass: {
         implementation: require("sass"),
-        additionalData: `@import "~@styles/_vars.scss";`,
+        additionalData: `@import "~@styles/_vars.scss"; @import "~@styles/_mixins.scss";`,
       },
     },
   },
