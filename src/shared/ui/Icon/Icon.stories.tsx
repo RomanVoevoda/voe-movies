@@ -44,6 +44,14 @@ export const SearchIcon: Story = {
   },
 };
 
+export const CheckIcon: Story = {
+  args: {
+    type: "check",
+    color: "gray",
+    size: "small",
+  },
+};
+
 export const InteractiveIcon: Story = {
   args: {
     color: "translucent",

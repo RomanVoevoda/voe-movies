@@ -46,6 +46,11 @@ describe("Icon", () => {
       render({ type: "search" }, "search-icon");
       expect(screen.getByTestId("search-icon")).toBeInTheDocument();
     });
+
+    test("check", () => {
+      render({ type: "check" }, "check-icon");
+      expect(screen.getByTestId("check-icon")).toBeInTheDocument();
+    });
   });
 
   describe("color", () => {
@@ -116,6 +121,12 @@ describe("Icon", () => {
       const component = screen.getByTestId("search-icon");
       expect(component).toHaveAttribute("aria-label", "search-icon");
     });
+
+    test("aria-label Check", () => {
+      render({ ariaLabel: "check-icon", type: "check" }, "check-icon");
+      const component = screen.getByTestId("check-icon");
+      expect(component).toHaveAttribute("aria-label", "check-icon");
+    });
   });
 
   describe("click event", () => {
@@ -139,6 +150,14 @@ describe("Icon", () => {
       let value = 0;
       render({ onClick: () => (value += 5), type: "search" }, "search-icon");
       const component = screen.getByTestId("search-icon");
+      fireEvent.click(component);
+      expect(value).toEqual(5);
+    });
+
+    test("click event Check", () => {
+      let value = 0;
+      render({ onClick: () => (value += 5), type: "check" }, "check-icon");
+      const component = screen.getByTestId("check-icon");
       fireEvent.click(component);
       expect(value).toEqual(5);
     });

@@ -5,6 +5,7 @@ import styles from "./Icon.module.scss";
 import classNames from "classnames";
 import XmarkIcon from "./XmarkIcon/XmarkIcon";
 import SearchIcon from "./SearchIcon/SearchIcon";
+import CheckIcon from "./CheckIcon/CheckIcon";
 
 const Icon: FC<IconFactoryProps> = ({
   type = "angle",
@@ -38,6 +39,8 @@ const Icon: FC<IconFactoryProps> = ({
       return <XmarkIcon {...iconProps} />;
     case "search":
       return <SearchIcon {...iconProps} />;
+    case "check":
+      return <CheckIcon {...iconProps} />;
     default:
       return <AngleIcon {...iconProps} />;
   }

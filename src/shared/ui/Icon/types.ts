@@ -1,5 +1,5 @@
 export interface IconFactoryProps extends BaseIconInterface {
-  type?: "angle" | "xmark" | "search";
+  type?: "angle" | "xmark" | "search" | "check";
   color?: "gray" | "translucent" | "white" | "dark_blue";
   size?: "small" | "normal" | "big";
   direction?: "bottom" | "right" | "left" | "top";
