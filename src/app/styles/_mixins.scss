@@ -14,3 +14,23 @@
     }
   }
 }
+
+@mixin scrollbar($color, $width, $trackWidth, $trackColor, $borderRadius: 0) {
+  &::-webkit-scrollbar {
+    width: $trackWidth !important;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: $trackColor !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $trackColor !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color !important;
+    border: $width solid $color !important;
+    border-radius: $borderRadius;
+  }
+}
