@@ -1,0 +1,93 @@
+.select {
+  position: relative;
+  cursor: pointer;
+  background-color: $color-background-main;
+  border-radius: $border-radius-button;
+  padding: 10px 15px;
+  padding-right: 30px;
+
+  & p {
+    overflow: hidden;
+  }
+
+  &_small {
+    max-width: 150px;
+
+    & p {
+      max-width: 120px;
+    }
+
+    .select__options_open {
+      .select__option {
+        min-height: 27.5px;
+      }
+
+      .select__container {
+        max-height: 110px;
+      }
+    }
+  }
+
+  &_gray {
+    border: 1px solid $color-border-translucent;
+    color: $color-font-gray;
+    .select__options_open {
+      border: 1px solid $color-border-translucent;
+    }
+  }
+
+  &__options {
+    display: grid;
+    transition:
+      grid-template-rows 0.5s ease,
+      -ms-grid-rows 0.5s ease;
+    grid-template-rows: 0fr;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $color-background-main;
+    z-index: $z-index-select-options;
+    border-radius: $border-radius-image;
+    overflow: hidden;
+
+    &_open {
+      grid-template-rows: 1fr;
+      border-top: none;
+      box-shadow: $box-shadow-base;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-height: 10rem;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include scrollbar($color-scrollbar, 2px, 2px, $color-scrollbar-track);
+  }
+
+  &__option {
+    position: relative;
+    padding: 8px;
+    padding-right: 30px;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      background-color: darken($color-background-main, 10%);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+  }
+}

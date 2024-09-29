@@ -30,6 +30,9 @@ $color-background-black: rgba(0, 0, 0, 1);
 $color-border-translucent: rgba(21, 21, 21, 0.28);
 $color-border-pink: rgba(255, 61, 129, 1);
 
+$color-scrollbar: rgba(109, 109, 109, 1);
+$color-scrollbar-track: rgba(152, 152, 152, 0.13);
+
 //size
 $size-font-title-big: 80px;
 $size-font-title-small: 60px;
@@ -46,3 +49,6 @@ $border-radius-button: 60px;
 //boxes of shadows
 $box-shadow-base: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 $box-shadow-inset: 1px 1px 3px 0 rgba(0, 0, 0, 0.16) inset;
+
+//z-index
+$z-index-select-options: 10;
