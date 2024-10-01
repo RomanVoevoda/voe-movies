@@ -1,0 +1,23 @@
+.card {
+  &__image {
+    border-radius: $border-radius-image;
+    -o-object-fit: cover;
+    object-fit: cover;
+    flex-shrink: 3;
+
+    @media screen and (width < 1200px) {
+      min-width: 100% !important;
+      min-height: auto !important;
+    }
+
+    &_preview {
+      min-height: 35.8125rem;
+      min-width: 30.125rem;
+    }
+
+    &_full {
+      min-height: 40.625rem;
+      min-width: 30.125rem;
+    }
+  }
+}

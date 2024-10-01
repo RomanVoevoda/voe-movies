@@ -1,0 +1,11 @@
+.card {
+  width: 19.6875rem;
+
+  &__image {
+    border-radius: $border-radius-image;
+    min-width: 19.6875rem;
+    min-height: 19.6875rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
