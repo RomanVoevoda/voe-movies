@@ -18,9 +18,10 @@ export interface TextSliceProps {
     | "small"
     | "normal"
     | "big"
-    | "banners_small"
-    | "banners_big"
+    | "extra_big"
+    | "titles_extra_small"
     | "titles_small"
+    | "titles_medium"
     | "titles_big";
   family?: "regular" | "medium" | "bold";
   indent?: number;

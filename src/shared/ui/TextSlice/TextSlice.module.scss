@@ -1,4 +1,6 @@
 .text {
+  width: 100%;
+
   &_color_black {
     color: $color-font-black;
   }
@@ -71,16 +73,20 @@
     font-size: $size-font-big;
   }
 
-  &_size_banners_small {
-    font-size: $size-font-banners-small;
+  &_size_extra_big {
+    font-size: $size-font-extra-big;
   }
 
-  &_size_banners_big {
-    font-size: $size-font-banners-big;
+  &_size_titles_extra_small {
+    font-size: $size-font-title-extra-small;
   }
 
   &_size_titles_small {
     font-size: $size-font-title-small;
+  }
+
+  &_size_titles_medium {
+    font-size: $size-font-title-medium;
   }
 
   &_size_titles_big {

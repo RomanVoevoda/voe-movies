@@ -34,10 +34,12 @@ $color-scrollbar: rgba(109, 109, 109, 1);
 $color-scrollbar-track: rgba(152, 152, 152, 0.13);
 
 //size
-$size-font-title-big: 80px;
-$size-font-title-small: 60px;
-$size-font-banners-big: 30px;
-$size-font-banners-small: 24px;
+//design layout width is 1440px
+$size-font-title-big: 5rem; //80px
+$size-font-title-medium: 3.75rem; //60px
+$size-font-title-small: 2.5rem; //40px
+$size-font-title-extra-small: 1.875rem; //30px
+$size-font-extra-big: 24px;
 $size-font-big: 20px;
 $size-font-normal: 18px;
 $size-font-small: 16px;

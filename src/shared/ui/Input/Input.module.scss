@@ -6,8 +6,7 @@
   font-family: $font-acrom-regular;
 
   &_normal {
-    width: 400px;
-    height: 40px;
+    min-width: 400px;
     padding: 10px 20px;
     font-size: $size-font-small;
   }

@@ -46,18 +46,18 @@ export const SmallTitleFont: Story = {
   },
 };
 
-export const SmallBannersFont: Story = {
+export const ExtraBigFont: Story = {
   args: {
-    size: "banners_small",
+    size: "extra_big",
     color: "blue",
     family: "medium",
     children,
   },
 };
 
-export const BigBannersFont: Story = {
+export const SmallestTitleFont: Story = {
   args: {
-    size: "banners_big",
+    size: "titles_extra_small",
     color: "yellow",
     family: "medium",
     children,

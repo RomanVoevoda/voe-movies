@@ -95,16 +95,20 @@ describe("TextSlice", () => {
       render({ size: "big" }, "text_size_big");
     });
 
-    test("banners_small", () => {
-      render({ size: "banners_small" }, "text_size_banners_small");
+    test("extra_big", () => {
+      render({ size: "extra_big" }, "text_size_extra_big");
     });
 
-    test("banners_big", () => {
-      render({ size: "banners_big" }, "text_size_banners_big");
+    test("titles_extra_small", () => {
+      render({ size: "titles_extra_small" }, "text_size_titles_extra_small");
     });
 
     test("titles_small", () => {
       render({ size: "titles_small" }, "text_size_titles_small");
+    });
+
+    test("titles_medium", () => {
+      render({ size: "titles_medium" }, "text_size_titles_medium");
     });
 
     test("titles_big", () => {

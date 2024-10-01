@@ -10,6 +10,7 @@
   font-family: $font-acrom-medium;
   border: none;
   padding: 10px 45px;
+  text-wrap: nowrap;
 
   @media (hover: hover) {
     &:hover {
