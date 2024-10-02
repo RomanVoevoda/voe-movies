@@ -80,4 +80,10 @@ describe("FlexDiv", () => {
       expect(component).toHaveStyle(`gap: ${gapValue}px`);
     });
   });
+
+  describe("extra class", () => {
+    test("extra class", () => {
+      render({ extraClass: "div" }, "div");
+    });
+  });
 });

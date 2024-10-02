@@ -7,6 +7,7 @@ export interface FlexDivProps {
   align?: "start" | "center" | "end";
   direction?: "row" | "column" | "row_reverse" | "column_reverse";
   wrap?: "wrap" | "nowrap";
+  extraClass?: string;
   gap?: number;
   children?: ReactNode;
 }
@@ -17,12 +18,14 @@ const FlexDiv: FC<FlexDivProps> = ({
   wrap = "wrap",
   gap = 0,
   children,
+  extraClass,
 }) => {
   const flexClass = classNames(styles.flex, {
     [styles[`flex_justify_${justify}`]]: justify,
     [styles[`flex_align_${align}`]]: align,
     [styles[`flex_${direction}`]]: direction,
     [styles[`flex_${wrap}`]]: wrap,
+    [`${extraClass}`]: extraClass,
   });
   return (
     <div
