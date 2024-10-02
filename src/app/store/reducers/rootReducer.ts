@@ -1,3 +1,6 @@
+import { moviesApi } from "@/entities";
 import { combineReducers } from "@reduxjs/toolkit";
 
-export const rootReducer = combineReducers({});
+export const rootReducer = combineReducers({
+  [moviesApi.reducerPath]: moviesApi.reducer,
+});

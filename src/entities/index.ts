@@ -1,1 +1,1 @@
-export { MovieCard, MovieSection } from "./movie";
+export { MovieCard, MovieSection, moviesApi } from "./movie";
