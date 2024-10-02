@@ -1,4 +1,19 @@
-.card {
+.section {
+  &__container {
+    &_main {
+      @media screen and (width < 1200px) {
+        gap: 10px !important;
+        flex-direction: column;
+      }
+    }
+
+    &_columns {
+      @media screen and (width < 1200px) {
+        gap: 20px !important;
+      }
+    }
+  }
+
   &__image {
     border-radius: $border-radius-image;
     -o-object-fit: cover;

@@ -1,6 +1,6 @@
 import { FlexDiv, TextSlice } from "@/shared/ui";
 import Image from "next/image";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import styles from "./MovieSection.module.scss";
 import { MovieSectionProps } from "@/entities/movie/model/types";
 import MovieInfo from "./MovieInfo/MovieInfo";
@@ -22,17 +22,9 @@ const MovieSection: FC<MovieSectionProps> = ({
   buttons,
 }) => {
   const imgClass = classNames({
-    [styles[`card__image`]]: true,
-    [styles[`card__image_${type}`]]: type,
+    [styles[`section__image`]]: true,
+    [styles[`section__image_${type}`]]: type,
   });
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <section
@@ -40,10 +32,11 @@ const MovieSection: FC<MovieSectionProps> = ({
       data-testid="MovieSection"
     >
       <FlexDiv
-        direction={windowWidth < 1200 ? "column" : "row"}
+        direction="row"
         wrap="nowrap"
         align="start"
-        gap={windowWidth < 1200 ? 10 : 40}
+        gap={40}
+        extraClass={styles.section__container_main}
       >
         <Image
           src={posterUrl}
@@ -58,13 +51,15 @@ const MovieSection: FC<MovieSectionProps> = ({
 
         <FlexDiv
           direction="column"
-          gap={windowWidth < 1200 ? 20 : 50}
+          gap={50}
+          extraClass={styles.section__container_columns}
         >
           <FlexDiv
             wrap="nowrap"
             align="start"
-            direction={windowWidth < 1200 ? "column" : "row"}
-            gap={windowWidth < 1200 ? 10 : 40}
+            direction="row"
+            gap={40}
+            extraClass={styles.section__container_main}
           >
             <TextSlice
               size="titles_big"
@@ -111,7 +106,7 @@ const MovieSection: FC<MovieSectionProps> = ({
             />
 
             <FlexDiv
-              direction={windowWidth < 1200 ? "row" : "row_reverse"}
+              direction="row_reverse"
               justify="start"
               align="end"
               gap={20}
