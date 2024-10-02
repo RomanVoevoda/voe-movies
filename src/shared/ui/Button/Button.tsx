@@ -5,6 +5,7 @@ import classNames from "classnames";
 export interface ButtonProps {
   type?: "contained" | "outlined" | "text";
   color?: "pink" | "dark_blue";
+  size?: "normal";
   submit?: boolean;
   onClick?: () => void;
   children: ReactNode;
@@ -14,11 +15,13 @@ const Button: FC<ButtonProps> = ({
   type = "contained",
   color = "pink",
   submit = false,
+  size = "normal",
   onClick,
   children,
 }) => {
   const buttonClass = classNames(styles.button, {
     [styles[`button_${type}`]]: true,
+    [styles[`button_${size}`]]: true,
     [styles[`button_${type}_${color}`]]: true,
   });
 

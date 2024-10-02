@@ -6,11 +6,12 @@
     scale 0.5s ease,
     color 1s ease,
     background-color 1s ease;
-  font-size: $size-font-normal;
-  font-family: $font-acrom-medium;
   border: none;
-  padding: 10px 45px;
   text-wrap: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   @media (hover: hover) {
     &:hover {
@@ -26,6 +27,17 @@
   @media (hover: none) {
     &:active {
       scale: 1.02;
+    }
+  }
+
+  &_normal {
+    font-size: $size-font-normal;
+    font-family: $font-acrom-medium;
+    padding: 10px 2.8125rem;
+    min-width: 190px;
+
+    @media screen and (width < 600px) {
+      min-width: 100%;
     }
   }
 
