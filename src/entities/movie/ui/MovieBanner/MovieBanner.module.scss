@@ -1,0 +1,91 @@
+.banner {
+  display: flex;
+  width: 100%;
+  padding: 2.125rem;
+  background-color: $color-background-dark-blue;
+  border-radius: $border-radius-image;
+  position: relative;
+  overflow: hidden;
+  gap: 2.5rem;
+
+  @media screen and (width < 1200px) {
+    padding: 1rem;
+  }
+
+  &__image {
+    position: relative;
+    width: 60%;
+    height: auto;
+    border-radius: $border-radius-image;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+    @media screen and (width < 1200px) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    padding: 2.125rem;
+    @media screen and (width < 1200px) {
+      justify-content: flex-end !important;
+      padding: 1.5rem;
+      position: absolute !important;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+      z-index: $z-index-text;
+      border-radius: $border-radius-image;
+    }
+  }
+
+  &__announcement {
+    padding-bottom: 6.25rem;
+
+    @media screen and (width < 1200px) {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      padding: 0;
+    }
+
+    @media screen and (width < 600px) {
+      font-size: $size-font-normal !important;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__title {
+    padding-bottom: 1.25rem;
+
+    @media screen and (width < 600px) {
+      padding-bottom: 0.5rem;
+      font-size: $size-font-title-small !important;
+    }
+  }
+
+  &__description {
+    padding-bottom: 2.875rem;
+
+    @media screen and (width < 1200px) {
+      width: 85% !important;
+      padding-bottom: 1rem;
+    }
+
+    @media screen and (width < 600px) {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    @media screen and (width < 1200px) {
+      width: 40% !important;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content !important;
+    }
+  }
+}
