@@ -2,6 +2,7 @@ import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { rootReducer } from "./reducers/rootReducer";
 import { Store } from "@/shared/config";
 import { moviesApi } from "@/entities";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 const middleware = [moviesApi.middleware];
 
@@ -12,6 +13,8 @@ export const createReduxStore = (initialState?: Store) => {
     preloadedState: initialState,
   });
 };
+
+setupListeners(createReduxStore().dispatch);
 
 export type RootState = ReturnType<ReturnType<typeof createReduxStore>["getState"]>;
 

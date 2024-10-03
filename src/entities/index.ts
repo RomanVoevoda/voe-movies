@@ -1,1 +1,9 @@
-export { MovieCard, MovieSection, moviesApi } from "./movie";
+export {
+  useGetMovieQuery,
+  useGetMoviesByFiltersQuery,
+  useGetMoviesCollectionQuery,
+  useGetMoviesPremieresQuery,
+  MovieCard,
+  MovieSection,
+  moviesApi,
+} from "./movie";
