@@ -71,3 +71,12 @@ export const SmallGrayFont: Story = {
     children,
   },
 };
+
+export const MontserratBannersFont: Story = {
+  args: {
+    size: "titles_small",
+    color: "dark_blue",
+    family: "montserrat",
+    children,
+  },
+};

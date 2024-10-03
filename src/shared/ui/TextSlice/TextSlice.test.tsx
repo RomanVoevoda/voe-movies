@@ -80,6 +80,10 @@ describe("TextSlice", () => {
     test("bold", () => {
       render({ family: "bold" }, "text_family_bold");
     });
+
+    test("montserrat", () => {
+      render({ family: "montserrat" }, "text_family_montserrat");
+    });
   });
 
   describe("size", () => {

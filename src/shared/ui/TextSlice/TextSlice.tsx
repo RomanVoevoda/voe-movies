@@ -23,7 +23,7 @@ export interface TextSliceProps {
     | "titles_small"
     | "titles_medium"
     | "titles_big";
-  family?: "regular" | "medium" | "bold";
+  family?: "regular" | "medium" | "bold" | "montserrat";
   indent?: number;
   children?: ReactNode;
 }
