@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { defaultFilters } from "../../../shared/consts/defaultFilters";
 import { FiltersType } from "@/shared/model";
+import { defaultFilters } from "@/shared/consts";
 
 const filtersSlice = createSlice({
   name: "filters",

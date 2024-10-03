@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ChangeEvent, FC } from "react";
 import styles from "./Input.module.scss";
 import classNames from "classnames";
 
@@ -9,7 +9,8 @@ export interface InputProps {
   label?: string;
   ariaLabel?: string;
   placeholder?: string;
-  onChange?: () => void;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: FC<InputProps> = ({
@@ -20,6 +21,7 @@ const Input: FC<InputProps> = ({
   ariaLabel,
   placeholder,
   onChange,
+  value,
 }) => {
   const inputClass = classNames({
     [styles["input"]]: true,
@@ -45,6 +47,7 @@ const Input: FC<InputProps> = ({
         className={inputClass}
         data-testid="Input"
         onChange={onChange}
+        value={value}
       />
     </>
   );
