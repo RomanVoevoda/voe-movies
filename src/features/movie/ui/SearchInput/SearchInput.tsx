@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon, Input } from "@/shared/ui";
-import React, { ChangeEvent, FC, FormEvent, useState } from "react";
+import React, { ChangeEvent, FC, FormEvent, useEffect, useState } from "react";
 import styles from "./SearchInput.module.scss";
 import classNames from "classnames";
 import { useRouter } from "next/navigation";
@@ -14,9 +14,7 @@ interface SearchInputProps {
 }
 
 const SearchInput: FC<SearchInputProps> = ({ placeholder = "Поиск..." }) => {
-  const keywords = localStorage.getItem("keywords") || "";
-
-  const [value, setValue] = useState<string>(keywords);
+  const [value, setValue] = useState<string>("");
   const router = useRouter();
   const dispatch = useTypedDispatch();
 
@@ -40,6 +38,11 @@ const SearchInput: FC<SearchInputProps> = ({ placeholder = "Поиск..." }) =>
     [styles[`form__icon`]]: value.length < 1,
     [styles[`form__icon_hidden`]]: value.length > 0,
   });
+
+  useEffect(() => {
+    const keywords = localStorage.getItem("keywords") || "";
+    setValue(keywords);
+  }, []);
 
   return (
     <form
