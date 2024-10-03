@@ -1,4 +1,4 @@
-import { FiltersType } from "../../model/filters/types";
+import { FiltersType } from "@/shared/model";
 
 export const defaultFilters: FiltersType = {
   yearFrom: 1000,

@@ -3,6 +3,6 @@ export interface FiltersType {
   yearTo: number;
   ratingFrom: number;
   type: "FILM" | "TV_SHOW" | "TV_SERIES" | "MINI_SERIES" | "ALL";
-  keyword?: "string";
+  keyword?: string;
   page: number;
 }

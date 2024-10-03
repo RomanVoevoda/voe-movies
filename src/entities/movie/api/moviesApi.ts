@@ -1,5 +1,6 @@
 import { axiosBaseQuery } from "@/shared/config";
-import { defaultFilters } from "@/shared/consts/defaultFilters";
+import { defaultFilters } from "@/shared/consts";
+
 import { FiltersType, MovieInfo, MoviesCollections, MoviesPremieres } from "@/shared/model";
 import { createApi } from "@reduxjs/toolkit/query/react";
 
