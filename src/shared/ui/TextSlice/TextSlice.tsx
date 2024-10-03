@@ -26,6 +26,7 @@ export interface TextSliceProps {
   family?: "regular" | "medium" | "bold" | "montserrat";
   indent?: number;
   children?: ReactNode;
+  extraClass?: string;
 }
 
 const TextSlice: FC<TextSliceProps> = ({
@@ -35,12 +36,14 @@ const TextSlice: FC<TextSliceProps> = ({
   family = "regular",
   indent = 0,
   children,
+  extraClass,
 }) => {
   const textClass = classNames(styles.text, {
     [styles[`text_color_${color}`]]: color,
     [styles[`text_align_${align}`]]: align,
     [styles[`text_size_${size}`]]: size,
     [styles[`text_family_${family}`]]: family,
+    [`${extraClass}`]: extraClass,
   });
   return (
     <p

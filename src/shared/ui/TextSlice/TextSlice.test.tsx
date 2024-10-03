@@ -128,4 +128,10 @@ describe("TextSlice", () => {
       expect(component).toHaveStyle(`text-indent: ${indentValue}px`);
     });
   });
+
+  describe("extra class", () => {
+    test("extra class", () => {
+      render({ extraClass: "Wowosa" }, "Wowosa");
+    });
+  });
 });
