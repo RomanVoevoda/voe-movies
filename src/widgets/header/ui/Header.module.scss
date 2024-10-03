@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $color-background-dark-blue;
+  height: 5rem;
+  padding: 0 5.75rem;
+
+  &__logo {
+    max-width: 14.625rem;
+    max-height: 3.6875rem;
+  }
+
+  &__container {
+    padding-left: 7.75rem;
+
+    @media screen and (width < 600px) {
+      display: none;
+    }
+  }
+}
