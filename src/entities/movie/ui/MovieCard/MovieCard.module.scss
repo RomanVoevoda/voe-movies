@@ -1,11 +1,35 @@
 .card {
-  width: 19.6875rem;
+  min-width: 19.6875rem;
+  height: 100%;
+  padding: 1rem;
+  border-radius: $border-radius-image;
+
+  & * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      box-shadow: $box-shadow-base;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      box-shadow: $box-shadow-base;
+    }
+  }
 
   &__image {
     border-radius: $border-radius-image;
-    min-width: 19.6875rem;
-    min-height: 19.6875rem;
-    -o-object-fit: cover;
-    object-fit: cover;
+    max-width: 19.6875rem !important;
+    max-height: 29.53125 !important;
+    aspect-ratio: 2/3 !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
   }
 }

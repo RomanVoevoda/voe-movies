@@ -4,15 +4,23 @@ import React, { FC } from "react";
 import styles from "./MovieCard.module.scss";
 import { MovieCardProps } from "@/entities/movie/model/types";
 
-const MovieCardSmall: FC<MovieCardProps> = ({ posterUrl, nameRu, year, ratingKinopoisk }) => {
+const MovieCardSmall: FC<MovieCardProps> = ({
+  posterUrl,
+  nameRu,
+  year,
+  ratingKinopoisk,
+  onClick,
+}) => {
   return (
     <article
       className={styles.card}
+      onClick={onClick}
       data-testid="MovieCard"
     >
       <FlexDiv
         direction="column"
         align="center"
+        wrap="nowrap"
         gap={10}
       >
         <Image
@@ -29,6 +37,8 @@ const MovieCardSmall: FC<MovieCardProps> = ({ posterUrl, nameRu, year, ratingKin
         <FlexDiv
           direction="column"
           align="center"
+          justify="end"
+          wrap="nowrap"
         >
           <TextSlice
             color="dark_blue"
@@ -37,7 +47,10 @@ const MovieCardSmall: FC<MovieCardProps> = ({ posterUrl, nameRu, year, ratingKin
           >
             {nameRu}
           </TextSlice>
-          <FlexDiv wrap="nowrap">
+          <FlexDiv
+            wrap="nowrap"
+            align="end"
+          >
             <TextSlice
               color="transcluent"
               size="small"
@@ -50,7 +63,7 @@ const MovieCardSmall: FC<MovieCardProps> = ({ posterUrl, nameRu, year, ratingKin
               family="medium"
               size="normal"
             >
-              {ratingKinopoisk}/10
+              {ratingKinopoisk || 0}/10
             </TextSlice>
           </FlexDiv>
         </FlexDiv>
