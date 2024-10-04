@@ -24,6 +24,7 @@ const MovieCardSmall: FC<MovieCardProps> = ({ posterUrl, nameRu, year, ratingKin
           width={0}
           height={0}
           data-testid="MovieImage"
+          layout="responsive"
         />
         <FlexDiv
           direction="column"

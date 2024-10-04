@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"],
+    formats: ["image/webp"],
     deviceSizes: [375, 600, 768, 992, 1200, 1920],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "kinopoiskapiunofficial.tech",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
   },
   sassOptions: {
     includePaths: ["./src"],

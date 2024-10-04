@@ -7,6 +7,7 @@
   background-color: $color-background-dark-blue;
   height: 5rem;
   padding: 0 5.75rem;
+  z-index: $z-index-header;
 
   &__logo {
     max-width: 14.625rem;
@@ -17,7 +18,7 @@
     padding-left: 7.75rem;
 
     @media screen and (width < 600px) {
-      display: none;
+      display: none !important;
     }
   }
 }

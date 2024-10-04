@@ -58,14 +58,20 @@ const MovieBanner: FC<MovieBannerProps> = ({
         <FlexDiv extraClass={styles.banner__buttons}>{button}</FlexDiv>
       </FlexDiv>
 
-      <Image
-        src={posterUrl}
-        width={0}
-        height={0}
-        alt={`Постер фильма ${nameRu}`}
-        className={styles.banner__image}
-        data-tesid="MovieImage"
-      />
+      <FlexDiv
+        justify="end"
+        extraClass={styles.banner__container}
+      >
+        <Image
+          width={0}
+          height={0}
+          src={posterUrl}
+          alt={`Постер фильма ${nameRu}`}
+          className={styles.banner__image}
+          data-tesid="MovieImage"
+          layout="responsive"
+        />
+      </FlexDiv>
     </article>
   );
 };

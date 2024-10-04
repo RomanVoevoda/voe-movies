@@ -47,6 +47,7 @@ const MovieSection: FC<MovieSectionProps> = ({
           height={0}
           className={imgClass}
           data-testid="MovieImage"
+          layout="responsive"
         />
 
         <FlexDiv
