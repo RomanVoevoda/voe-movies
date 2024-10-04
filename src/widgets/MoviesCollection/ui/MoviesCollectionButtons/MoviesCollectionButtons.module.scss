@@ -1,0 +1,6 @@
+.container {
+  gap: 3.125rem !important;
+  @media screen and (width < 1200px) {
+    gap: 0 !important;
+  }
+}

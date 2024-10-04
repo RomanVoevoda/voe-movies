@@ -1,0 +1,16 @@
+export const enum collectionsEnum {
+  TOP_POPULAR_ALL = "Популярные",
+  TOP_POPULAR_MOVIES = "Популярные фильмы",
+  TOP_250_TV_SHOWS = "Топ 250 сериалов",
+  TOP_250_MOVIES = "Топ 250 фильмов",
+  VAMPIRE_THEME = "Вампиры",
+  COMICS_THEME = "Комиксы",
+  CLOSES_RELEASES = "Ближайшие релизы",
+  FAMILY = "Семья",
+  OSKAR_WINNERS_2021 = "Победители Оскар 2021",
+  LOVE_THEME = "Романтика",
+  ZOMBIE_THEME = "Зомби",
+  CATASTROPHE_THEME = "Катастрофы",
+  KIDS_ANIMATION_THEME = "Мультфильмы",
+  POPULAR_SERIES = "Популярные сериалы",
+}

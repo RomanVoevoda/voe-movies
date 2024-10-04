@@ -14,6 +14,7 @@ export interface MovieCardProps extends Omit<MovieRatingProps, "ratingImdb"> {
   posterUrl: string;
   nameRu: string;
   year: number;
+  onClick?: () => void;
 }
 
 export interface MovieRatingProps {

@@ -1,0 +1,13 @@
+.container {
+  height: 40rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+
+  @include scrollbar($color-scrollbar, 2px, 2px, $color-scrollbar-track);
+
+  @media screen and (width < 600px) {
+    gap: 0.5rem;
+    height: 44rem;
+  }
+}
