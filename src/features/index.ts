@@ -1,1 +1,1 @@
-export { SearchInput } from "./movie";
+export { SearchInput, NavigateButton } from "./movie";
