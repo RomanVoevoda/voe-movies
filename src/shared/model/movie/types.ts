@@ -1,3 +1,9 @@
+export interface MovieItems {
+  total: number;
+  totalPages: number;
+  items: MovieInfo[];
+}
+
 export interface MovieInfo {
   kinopoiskId: number;
   kinopoiskHDId: string;

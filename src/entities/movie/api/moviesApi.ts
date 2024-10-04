@@ -1,7 +1,13 @@
 import { axiosBaseQuery } from "@/shared/config";
 import { defaultFilters } from "@/shared/consts";
 
-import { FiltersType, MovieInfo, MoviesCollections, MoviesPremieres } from "@/shared/model";
+import {
+  FiltersType,
+  MovieInfo,
+  MovieItems,
+  MoviesCollections,
+  MoviesPremieres,
+} from "@/shared/model";
 import { createApi } from "@reduxjs/toolkit/query/react";
 
 if (!process.env.NEXT_PUBLIC_BASE_URL) {
@@ -26,7 +32,7 @@ export const moviesApi = createApi({
       query: (id) => ({ url: `films/${id}`, method: "get" }),
     }),
 
-    getMoviesByFilters: builder.query<MovieInfo[], Partial<FiltersType>>({
+    getMoviesByFilters: builder.query<MovieItems, Partial<FiltersType>>({
       query: (filters) => ({
         url: `films`,
         method: "get",
@@ -34,7 +40,7 @@ export const moviesApi = createApi({
       }),
     }),
 
-    getMoviesCollection: builder.query<MovieInfo[], MoviesCollections>({
+    getMoviesCollection: builder.query<MovieItems, MoviesCollections>({
       query: ({ type = "TOP_POPULAR_ALL", page = 1 }) => ({
         url: `films/collections`,
         method: "get",
@@ -42,8 +48,8 @@ export const moviesApi = createApi({
       }),
     }),
 
-    getMoviesPremieres: builder.query<MovieInfo[], MoviesPremieres>({
-      query: ({ year, month }) => ({
+    getMoviesPremieres: builder.query<MovieItems, MoviesPremieres>({
+      query: ({ year, month = "JANUARY" }) => ({
         url: `films/premieres`,
         method: "get",
         params: month ? { year: year, month: month } : { year: year },

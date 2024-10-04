@@ -18,14 +18,16 @@ export const axiosBaseQuery =
     unknown,
     unknown
   > =>
-  async ({ url, method, data, params, headers }) => {
+  async ({ url, method, data, params, headers: customHeaders }) => {
     try {
+      const finalHeaders = { ...headers, ...customHeaders };
+
       const result = await axios({
         url: baseUrl + url,
         method,
         data,
         params,
-        headers,
+        headers: finalHeaders,
       });
       return { data: result.data };
     } catch (axiosError) {
