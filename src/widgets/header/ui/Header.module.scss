@@ -4,10 +4,18 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: $color-background-dark-blue;
   height: 5rem;
-  padding: 0 5.75rem;
   z-index: $z-index-header;
+
+  &__main {
+    padding: 0 5.75rem;
+    z-index: 20;
+    background-color: $color-background-dark-blue;
+
+    @media screen and (width < 800px) {
+      padding: 0 1.5rem;
+    }
+  }
 
   &__logo {
     max-width: 14.625rem;
@@ -17,7 +25,31 @@
   &__container {
     padding-left: 7.75rem;
 
-    @media screen and (width < 600px) {
+    @media screen and (width < 800px) {
+      display: none !important;
+    }
+  }
+
+  &__icon {
+    @media screen and (width >= 800px) {
+      display: none !important;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    padding: 0 1.5rem;
+    background-color: $color-background-dark-blue;
+    transition: transform 0.2s ease;
+    z-index: 1;
+
+    &_open {
+      transform: translateY(4.8rem);
+    }
+
+    @media screen and (width >= 800px) {
       display: none !important;
     }
   }

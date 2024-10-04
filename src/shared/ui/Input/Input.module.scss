@@ -11,6 +11,13 @@
     font-size: $size-font-small;
   }
 
+  &_adaptive {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    font-size: $size-font-small;
+  }
+
   &:focus {
     border: 2px solid $color-border-translucent;
     box-shadow: $box-shadow-inset;

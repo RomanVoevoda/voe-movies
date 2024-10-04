@@ -26,6 +26,10 @@ describe("Input", () => {
     test("normal", () => {
       render({ size: "normal" }, "input_normal");
     });
+
+    test("adaptive", () => {
+      render({ size: "adaptive" }, "input_adaptive");
+    });
   });
 
   describe("type", () => {

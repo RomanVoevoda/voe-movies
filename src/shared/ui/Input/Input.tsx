@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 export interface InputProps {
   type?: "text" | "search";
-  size?: "normal";
+  size?: "adaptive" | "normal";
   id?: string;
   label?: string;
   ariaLabel?: string;

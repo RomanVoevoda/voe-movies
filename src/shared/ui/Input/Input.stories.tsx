@@ -27,3 +27,11 @@ export const SearchInput: Story = {
     size: "normal",
   },
 };
+
+export const AdaptiveInput: Story = {
+  args: {
+    type: "search",
+    placeholder: "Поиск...",
+    size: "adaptive",
+  },
+};
