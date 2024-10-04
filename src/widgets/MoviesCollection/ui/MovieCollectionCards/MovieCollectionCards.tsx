@@ -30,6 +30,7 @@ const MovieCollectionCards: FC<MovieCollectionCardsProps> = ({ movies }) => {
           <Button
             type="text"
             color="dark_blue"
+            padding={0}
           >
             Смотреть все &nbsp;
             <Icon
@@ -48,6 +49,7 @@ const MovieCollectionCards: FC<MovieCollectionCardsProps> = ({ movies }) => {
       >
         {movies.slice(0, 8).map((movie) => (
           <MovieCard
+            key={movie.kinopoiskId}
             year={movie.year}
             nameRu={movie.nameRu}
             posterUrl={movie.posterUrl}

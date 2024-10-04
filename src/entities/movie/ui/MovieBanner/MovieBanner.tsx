@@ -59,8 +59,8 @@ const MovieBanner: FC<MovieBannerProps> = ({
       </FlexDiv>
 
       <FlexDiv
-        justify="end"
-        extraClass={styles.banner__container}
+        justify="center"
+        align="start"
       >
         <Image
           width={0}

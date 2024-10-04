@@ -3,6 +3,9 @@
   height: 100%;
   padding: 1rem;
   border-radius: $border-radius-image;
+  box-shadow: $box-shadow-base;
+  transition: background-color 0.5s ease;
+  background-color: $color-background-main;
 
   & * {
     -webkit-user-select: none;
@@ -14,22 +17,18 @@
   @media (hover: hover) {
     &:hover {
       cursor: pointer;
-      box-shadow: $box-shadow-base;
+      background-color: $color-background-translucent;
     }
   }
 
   @media (hover: none) {
     &:active {
-      box-shadow: $box-shadow-base;
+      background-color: $color-background-translucent;
     }
   }
 
   &__image {
     border-radius: $border-radius-image;
-    max-width: 19.6875rem !important;
-    max-height: 29.53125 !important;
-    aspect-ratio: 2/3 !important;
-    -o-object-fit: cover !important;
-    object-fit: cover !important;
+    aspect-ratio: $aspect-ratio-poster !important;
   }
 }

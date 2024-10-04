@@ -27,6 +27,7 @@ $color-skeleton: rgba(217, 217, 217, 1);
 $color-background-main: rgba(255, 255, 255, 1);
 $color-background-dark-blue: rgba(8, 4, 35, 1);
 $color-background-black: rgba(0, 0, 0, 1);
+$color-background-translucent: rgba(21, 21, 21, 0.28);
 
 $color-border-translucent: rgba(21, 21, 21, 0.28);
 $color-border-pink: rgba(255, 61, 129, 1);
@@ -57,3 +58,8 @@ $box-shadow-inset: 1px 1px 3px 0 rgba(0, 0, 0, 0.16) inset;
 $z-index-text: 5;
 $z-index-select-options: 10;
 $z-index-header: 100;
+
+//aspect-ratio
+$aspect-ratio-poster: 2/3;
+$aspect-ratio-banner: 16/9;
+$aspect-ratio-square: 1/1;

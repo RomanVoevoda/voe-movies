@@ -9,6 +9,7 @@ export interface ButtonProps {
   submit?: boolean;
   onClick?: () => void;
   children: ReactNode;
+  padding?: number;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ const Button: FC<ButtonProps> = ({
   size = "normal",
   onClick,
   children,
+  padding,
 }) => {
   const buttonClass = classNames(styles.button, {
     [styles[`button_${type}`]]: true,
@@ -31,6 +33,7 @@ const Button: FC<ButtonProps> = ({
       onClick={onClick}
       type={submit ? "submit" : "button"}
       data-testid="Button"
+      style={{ padding: `${padding}px` }}
     >
       {children}
     </button>

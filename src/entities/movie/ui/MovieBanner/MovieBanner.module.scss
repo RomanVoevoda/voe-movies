@@ -4,12 +4,12 @@
   background-color: $color-background-dark-blue;
   border-radius: $border-radius-image;
   position: relative;
-  overflow: hidden;
   gap: 2.5rem;
   max-height: 34.25rem;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+  overflow: hidden;
 
   @media screen and (width < 1200px) {
     width: 70%;
@@ -20,23 +20,11 @@
     width: 100%;
   }
 
-  &__container {
-    max-height: 100%;
-    overflow: hidden;
-  }
-
   &__image {
-    position: relative !important;
-    top: 0 !important;
-    width: 60% !important;
-    height: auto !important;
     border-radius: $border-radius-image !important;
     -o-object-fit: cover !important;
     object-fit: cover !important;
-
-    @media screen and (width < 1200px) {
-      width: 100% !important;
-    }
+    aspect-ratio: $aspect-ratio-poster;
   }
 
   &__info {
