@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import styles from "./MovieBanner.module.scss";
 import { Button, FlexDiv, TextSlice } from "@/shared/ui";
 import Image from "next/image";
@@ -8,9 +8,16 @@ interface MovieBannerProps {
   description: string;
   posterUrl: string;
   announcement: string;
+  button: ReactNode;
 }
 
-const MovieBanner: FC<MovieBannerProps> = ({ posterUrl, nameRu, description, announcement }) => {
+const MovieBanner: FC<MovieBannerProps> = ({
+  posterUrl,
+  nameRu,
+  description,
+  announcement,
+  button,
+}) => {
   return (
     <article
       className={styles.banner}
@@ -48,14 +55,7 @@ const MovieBanner: FC<MovieBannerProps> = ({ posterUrl, nameRu, description, ann
           {description}
         </TextSlice>
 
-        <FlexDiv extraClass={styles.banner__buttons}>
-          <Button
-            type="contained"
-            color="pink"
-          >
-            Смотреть
-          </Button>
-        </FlexDiv>
+        <FlexDiv extraClass={styles.banner__buttons}>{button}</FlexDiv>
       </FlexDiv>
 
       <Image

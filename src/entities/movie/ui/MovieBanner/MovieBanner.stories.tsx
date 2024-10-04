@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import MovieBanner from "./MovieBanner";
+import { Button } from "@/shared/ui";
 
 const meta = {
   title: "entities/MovieBanner",
@@ -20,5 +21,13 @@ export const Banner: Story = {
     description:
       "Исследуя заброшенную космическую станцию, группа колонизаторов сталкивается с самой ужасающей формой жизни во Вселенной.",
     announcement: "УЖЕ В КИНО",
+    button: (
+      <Button
+        type="contained"
+        color="pink"
+      >
+        Смотреть
+      </Button>
+    ),
   },
 };
