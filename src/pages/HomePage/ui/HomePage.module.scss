@@ -1,0 +1,10 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.75rem;
+  gap: 3.75rem;
+  width: 100%;
+  background-color: $color-background-main;
+  @include scrollbar($color-scrollbar, 2px, 2px, $color-scrollbar-track);
+}

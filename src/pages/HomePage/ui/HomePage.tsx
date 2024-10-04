@@ -1,7 +1,13 @@
+import { Banner } from "@/widgets";
 import React, { FC } from "react";
+import styles from "./HomePage.module.scss";
 
 const HomePage: FC = () => {
-  return <div>HomePage</div>;
+  return (
+    <main className={styles.page}>
+      <Banner />
+    </main>
+  );
 };
 
 export default HomePage;
