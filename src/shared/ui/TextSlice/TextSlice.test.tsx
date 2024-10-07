@@ -30,6 +30,16 @@ describe("TextSlice", () => {
     });
   });
 
+  describe("expanse", () => {
+    test("block", () => {
+      render({ expanse: "block" }, "text_expanse_block");
+    });
+
+    test("content", () => {
+      render({ expanse: "content" }, "text_expanse_content");
+    });
+  });
+
   describe("color", () => {
     test("black", () => {
       render({ color: "black" }, "text_color_black");

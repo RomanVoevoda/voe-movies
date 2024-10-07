@@ -5,7 +5,7 @@ import classNames from "classnames";
 export interface ButtonProps {
   type?: "contained" | "outlined" | "text";
   color?: "pink" | "dark_blue" | "white" | "gray";
-  size?: "normal";
+  size?: "content" | "normal";
   submit?: boolean;
   onClick?: () => void;
   children: ReactNode;

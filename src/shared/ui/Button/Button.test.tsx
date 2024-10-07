@@ -56,6 +56,10 @@ describe("Button", () => {
     test("normal", () => {
       render({ size: "normal", children }, "button_normal");
     });
+
+    test("content", () => {
+      render({ size: "content", children }, "button_content");
+    });
   });
 
   describe("submit", () => {

@@ -1,5 +1,13 @@
 .text {
-  width: 100%;
+  &_expanse_block {
+    width: 100%;
+  }
+
+  &_expanse_content {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 
   &_color_black {
     color: $color-font-black;

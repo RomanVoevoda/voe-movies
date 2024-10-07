@@ -17,6 +17,7 @@ const FooterButtons: FC = () => {
           <Button
             color="white"
             type="text"
+            size="content"
             padding={0}
           >
             Главная
@@ -29,6 +30,7 @@ const FooterButtons: FC = () => {
           <Button
             color="white"
             type="text"
+            size="content"
             padding={0}
           >
             Популярные фильмы
@@ -41,6 +43,7 @@ const FooterButtons: FC = () => {
           <Button
             color="white"
             type="text"
+            size="content"
             padding={0}
           >
             Популярные сериалы

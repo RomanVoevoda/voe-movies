@@ -1,6 +1,7 @@
 .button {
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: $border-radius-button;
   transition:
     scale 0.5s ease,
@@ -28,6 +29,14 @@
     &:active {
       scale: 1.02;
     }
+  }
+
+  &_content {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    font-size: $size-font-normal;
+    font-family: $font-acrom-medium;
   }
 
   &_normal {

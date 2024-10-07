@@ -30,6 +30,7 @@ const MovieCollectionCards: FC<MovieCollectionCardsProps> = ({ movies }) => {
           <Button
             type="text"
             color="dark_blue"
+            size="content"
             padding={0}
           >
             Смотреть все &nbsp;

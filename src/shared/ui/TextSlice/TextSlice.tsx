@@ -24,6 +24,7 @@ export interface TextSliceProps {
     | "titles_medium"
     | "titles_big";
   family?: "regular" | "medium" | "bold" | "montserrat";
+  expanse?: "content" | "block";
   indent?: number;
   children?: ReactNode;
   extraClass?: string;
@@ -35,6 +36,7 @@ const TextSlice: FC<TextSliceProps> = ({
   size = "normal",
   family = "regular",
   indent = 0,
+  expanse = "block",
   children,
   extraClass,
 }) => {
@@ -43,6 +45,7 @@ const TextSlice: FC<TextSliceProps> = ({
     [styles[`text_align_${align}`]]: align,
     [styles[`text_size_${size}`]]: size,
     [styles[`text_family_${family}`]]: family,
+    [styles[`text_expanse_${expanse}`]]: expanse,
     [`${extraClass}`]: extraClass,
   });
   return (

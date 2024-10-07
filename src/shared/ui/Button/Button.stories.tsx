@@ -37,3 +37,12 @@ export const TextButton: Story = {
     children,
   },
 };
+
+export const PaginationButton: Story = {
+  args: {
+    type: "text",
+    color: "dark_blue",
+    size: "content",
+    children: "1",
+  },
+};

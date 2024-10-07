@@ -14,6 +14,7 @@ const MoviesPageTitle: FC = () => {
             <Button
               type="text"
               color="gray"
+              size="content"
             >
               <Icon
                 type="angle"
