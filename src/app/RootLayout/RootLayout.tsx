@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Providers from "../Providers/Providers";
 import "../styles/index.scss";
 import { Header } from "@/widgets";
+import { Footer } from "@/widgets";
 
 export const metadata: Metadata = {
   title: "VoeMovie",
@@ -22,6 +23,7 @@ export const RootLayout = ({
           <>
             <Header />
             {children}
+            <Footer />
           </>
         </Providers>
       </body>

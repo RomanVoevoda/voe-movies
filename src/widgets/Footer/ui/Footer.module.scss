@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+  bottom: 0;
+  min-height: 5rem;
+  padding: 0 5.75rem;
+  background-color: $color-background-dark-blue;
+  overflow: hidden;
+
+  @media screen and (width < 800px) {
+    padding: 0 1.5rem;
+  }
+
+  &__logo {
+    max-width: 14.625rem;
+    max-height: 3.6875rem;
+  }
+}

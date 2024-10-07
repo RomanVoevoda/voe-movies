@@ -1,0 +1,14 @@
+.container {
+  padding: 1rem;
+  gap: 40px !important;
+
+  @media screen and (width < 1200px) {
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 1rem !important;
+  }
+
+  @media screen and (width < 600px) {
+    display: none !important;
+  }
+}
