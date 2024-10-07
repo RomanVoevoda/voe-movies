@@ -1,0 +1,18 @@
+.filters {
+  z-index: $z-index-select-options;
+  gap: 1rem !important;
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.2s ease;
+    transition:
+      grid-template-rows 0.2s ease,
+      -ms-grid-rows 0.2s ease;
+
+    &_open {
+      grid-template-rows: 1fr;
+    }
+  }
+}

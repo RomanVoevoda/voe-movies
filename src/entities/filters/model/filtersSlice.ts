@@ -22,6 +22,10 @@ const filtersSlice = createSlice({
     setRating(state, action: PayloadAction<number>) {
       state.ratingFrom = action.payload;
     },
+
+    setDefault(state) {
+      return { ...defaultFilters };
+    },
   },
 });
 

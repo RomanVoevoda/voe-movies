@@ -10,11 +10,7 @@ const MoviesPage: FC = () => {
   const filters = useTypedSelector((store) => store.filters);
   const { data, isLoading, isError } = useGetMoviesByFiltersQuery(filters);
 
-  if (isError || data == undefined) {
-    return <h1>Ошибка загрузки</h1>;
-  }
-
-  const { items } = data;
+  const items = data?.items;
 
   return (
     <main className={styles.page}>
@@ -22,9 +18,10 @@ const MoviesPage: FC = () => {
 
       {isLoading && <h1>Загрузка...</h1>}
 
-      {(!isLoading && items.length < 1 && <h1>Фильмы не найдены</h1>) || (
-        <MoviesList movies={items} />
-      )}
+      {isError && <h1>Ошибка загрузки</h1>}
+
+      {(!isLoading && items == undefined && <h1>Фильмы не найдены</h1>) ||
+        (items != undefined && <MoviesList movies={items} />)}
     </main>
   );
 };

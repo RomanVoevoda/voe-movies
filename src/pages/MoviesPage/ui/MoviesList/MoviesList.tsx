@@ -26,15 +26,17 @@ const MoviesList: FC<MoviesListProps> = ({ movies }) => {
               route={routesEnum.movieById}
               id={movie.kinopoiskId}
               button={<Button color="pink">Смотреть</Button>}
+              key={Date.now() + "Смотреть"}
             />,
             <Button
               type="text"
               color="pink"
+              key={Date.now() + "В избранное"}
             >
               В избранное
             </Button>,
           ]}
-          key={movie.kinopoiskId}
+          key={movie.kinopoiskId || Date.now()}
           genre={movie.genres.map((genre) => genre.genre).join(", ")}
           country={movie.countries.map((country) => country.country).join(", ")}
           year={movie.year}

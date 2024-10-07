@@ -2,6 +2,7 @@ import { NavigateButton } from "@/features";
 import { routesEnum } from "@/shared/config";
 import { Button, FlexDiv, Icon, TextSlice } from "@/shared/ui";
 import React, { FC } from "react";
+import MoviePageFilters from "../MoviePageFilters/MoviePageFilters";
 
 const MoviesPageTitle: FC = () => {
   return (
@@ -24,6 +25,9 @@ const MoviesPageTitle: FC = () => {
           }
         />
       </FlexDiv>
+
+      <MoviePageFilters />
+
       <TextSlice
         color="dark_blue"
         family="medium"
