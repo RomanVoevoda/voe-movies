@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 export interface ButtonProps {
   type?: "contained" | "outlined" | "text";
-  color?: "pink" | "dark_blue";
+  color?: "pink" | "dark_blue" | "white" | "gray";
   size?: "normal";
   submit?: boolean;
   onClick?: () => void;

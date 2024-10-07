@@ -53,6 +53,19 @@
       background-color: $color-btn-dark-blue;
       @include interactiveColor(background-color, $color-btn-dark-blue, 5%);
     }
+
+    &_white {
+      color: $color-btn-dark-blue;
+      background-color: $color-btn-white;
+      @include interactiveColor(background-color, $color-btn-white, 5%);
+    }
+
+    &_gray {
+      color: $color-btn-white;
+      background-color: $color-btn-gray;
+
+      @include interactiveColor(background-color, $color-btn-gray, 5%);
+    }
   }
 
   &_outlined {
@@ -73,6 +86,22 @@
       @include interactiveColor(color, $color-font-white, 5%);
       @include interactiveColor(background-color, $color-btn-dark-blue, 5%);
     }
+
+    &_white {
+      color: $color-btn-white;
+      border: 1px solid $color-btn-white;
+
+      @include interactiveColor(color, $color-font-dark-blue, 5%);
+      @include interactiveColor(background-color, $color-btn-white, 5%);
+    }
+
+    &_gray {
+      color: $color-btn-gray;
+      border: 1px solid $color-btn-gray;
+
+      @include interactiveColor(color, $color-font-white, 5%);
+      @include interactiveColor(background-color, $color-btn-gray, 5%);
+    }
   }
 
   &_text {
@@ -86,6 +115,18 @@
     &_dark_blue {
       color: $color-font-dark_blue;
       @include interactiveColor(color, $color-font-dark_blue, 5%);
+    }
+
+    &_white {
+      color: $color-btn-white;
+
+      @include interactiveColor(color, $color-btn-white, 5%);
+    }
+
+    &_gray {
+      color: $color-btn-gray;
+
+      @include interactiveColor(color, $color-btn-gray, 5%);
     }
   }
 }

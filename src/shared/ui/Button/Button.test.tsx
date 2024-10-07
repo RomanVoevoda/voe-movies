@@ -28,6 +28,14 @@ describe("Button", () => {
     test("dark_blue", () => {
       render({ color: "dark_blue", children }, "button_contained_dark_blue");
     });
+
+    test("white", () => {
+      render({ color: "white", children }, "button_contained_white");
+    });
+
+    test("gray", () => {
+      render({ color: "gray", children }, "button_contained_gray");
+    });
   });
 
   describe("type", () => {
