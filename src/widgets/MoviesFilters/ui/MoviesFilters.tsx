@@ -1,11 +1,9 @@
 "use client";
-import { Button, FlexDiv, Select } from "@/shared/ui";
+import { FlexDiv } from "@/shared/ui";
 import React, { FC } from "react";
 import styles from "./MoviesFilters.module.scss";
-import { filtersTypesKeysEnum, ratingOptions, typeOptions, yearOptions } from "@/shared/consts";
-import { filtersSliceActions } from "@/entities";
 import classNames from "classnames";
-import { useTypedDispatch } from "@/shared/hooks";
+import { RatingSelect, ResetButton, TypeSelect, YearSelect } from "@/features";
 
 interface MoviesFiltersProps {
   year?: boolean;
@@ -26,64 +24,20 @@ const MoviesFilters: FC<MoviesFiltersProps> = ({
   customTypeOptions,
   isOpen,
 }) => {
-  const dispatch = useTypedDispatch();
-
   const containerClass = classNames({
     [styles.container]: true,
     [styles.container_visible]: isOpen,
   });
 
-  const handleYearSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filtersSliceActions.setYearFilter(+e.target.value));
-  };
-
-  const handleRatingSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filtersSliceActions.setRating(+e.target.value));
-  };
-
-  const handleTypeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filtersSliceActions.setMoviesType(filtersTypesKeysEnum[e.target.value]));
-  };
-
-  const handleButtonClick = () => {
-    dispatch(filtersSliceActions.setDefault());
-  };
-
   return (
     <FlexDiv extraClass={containerClass}>
-      {year && (
-        <Select
-          defaultOption="Год"
-          options={customYearOptions || yearOptions}
-          onChange={handleYearSelect}
-        />
-      )}
+      {year && <YearSelect options={customYearOptions} />}
 
-      {rating && (
-        <Select
-          defaultOption="Рейтинг"
-          options={customRatingOptions || ratingOptions}
-          onChange={handleRatingSelect}
-        />
-      )}
+      {rating && <RatingSelect options={customRatingOptions} />}
 
-      {type && (
-        <Select
-          defaultOption="Тип"
-          options={customTypeOptions || typeOptions}
-          onChange={handleTypeSelect}
-        />
-      )}
+      {type && <TypeSelect options={customTypeOptions} />}
 
-      {(year || rating || type) && (
-        <Button
-          type="contained"
-          color="dark_blue"
-          onClick={handleButtonClick}
-        >
-          Сбросить
-        </Button>
-      )}
+      {(year || rating || type) && <ResetButton />}
     </FlexDiv>
   );
 };
