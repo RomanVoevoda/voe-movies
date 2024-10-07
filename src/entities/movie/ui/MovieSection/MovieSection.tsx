@@ -30,6 +30,7 @@ const MovieSection: FC<MovieSectionProps> = ({
     <section
       aria-label={`Информация о фильме ${nameRu}`}
       data-testid="MovieSection"
+      className={styles.section}
     >
       <FlexDiv
         direction="row"
@@ -66,6 +67,7 @@ const MovieSection: FC<MovieSectionProps> = ({
               size="titles_big"
               family="bold"
               color="blue"
+              extraClass={styles.section__title}
             >
               {nameRu}
             </TextSlice>

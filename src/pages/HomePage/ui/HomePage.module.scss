@@ -5,7 +5,7 @@
   padding: 3.75rem;
   gap: 3.75rem;
   width: 100%;
-  min-height: calc(100svh - 10rem);
+  min-height: calc(100dvh - 10rem);
   background-color: $color-background-main;
   @include scrollbar($color-scrollbar, 2px, 2px, $color-scrollbar-track);
 }

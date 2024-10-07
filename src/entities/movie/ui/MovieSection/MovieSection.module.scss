@@ -1,9 +1,12 @@
 .section {
+  width: 100%;
+
   &__container {
     &_main {
       @media screen and (width < 1200px) {
         gap: 10px !important;
-        flex-direction: column;
+        flex-direction: column !important;
+        align-items: center !important;
       }
     }
 
@@ -18,21 +21,22 @@
     border-radius: $border-radius-image;
     -o-object-fit: cover;
     object-fit: cover;
-    flex-shrink: 3;
-
-    @media screen and (width < 1200px) {
-      min-width: 100% !important;
-      min-height: auto !important;
-    }
+    aspect-ratio: $aspect-ratio-poster;
 
     &_preview {
-      min-height: 35.8125rem;
-      min-width: 30.125rem;
+      max-height: 35.8125rem;
+      max-width: 30.125rem;
     }
 
     &_full {
-      min-height: 40.625rem;
-      min-width: 30.125rem;
+      max-height: 40.625rem;
+      max-width: 30.125rem;
+    }
+  }
+
+  &__title {
+    @media screen and (width < 1200px) {
+      font-size: $size-font-title-medium !important;
     }
   }
 }
