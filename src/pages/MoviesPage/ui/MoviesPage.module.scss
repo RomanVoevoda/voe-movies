@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3.75rem;
+  gap: 4.375rem;
+  width: 100%;
+  min-height: calc(100dvh - 10rem);
+  overflow: hidden;
+
+  @media screen and (width < 800px) {
+    gap: 1rem;
+  }
+}

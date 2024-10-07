@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-height: 113.5625rem;
+  gap: 3.125rem;
+  padding: 0 1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include scrollbar($color-scrollbar, 2px, 2px, $color-scrollbar-track);
+}
