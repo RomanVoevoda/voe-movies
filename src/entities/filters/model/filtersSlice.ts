@@ -26,6 +26,10 @@ const filtersSlice = createSlice({
     setDefault(state) {
       return { ...defaultFilters };
     },
+
+    setPage(state, action: PayloadAction<number>) {
+      state.page = action.payload;
+    },
   },
 });
 

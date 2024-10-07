@@ -5,6 +5,7 @@ import MoviesPageTitle from "./MoviesPageTitle/MoviesPageTitle";
 import { useGetMoviesByFiltersQuery } from "@/entities";
 import { useTypedSelector } from "@/shared/hooks";
 import MoviesList from "./MoviesList/MoviesList";
+import { MoviesPagination } from "@/widgets";
 
 const MoviesPage: FC = () => {
   const filters = useTypedSelector((store) => store.filters);
@@ -21,7 +22,13 @@ const MoviesPage: FC = () => {
       {isError && <h1>Ошибка загрузки</h1>}
 
       {(!isLoading && items == undefined && <h1>Фильмы не найдены</h1>) ||
-        (items != undefined && <MoviesList movies={items} />)}
+        (data && items != undefined && (
+          <>
+            <MoviesPagination pagesCount={data.totalPages} />
+            <MoviesList movies={items} />
+            <MoviesPagination pagesCount={data.totalPages} />
+          </>
+        ))}
     </main>
   );
 };
