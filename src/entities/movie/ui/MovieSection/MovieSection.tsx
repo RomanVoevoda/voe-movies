@@ -41,7 +41,7 @@ const MovieSection: FC<MovieSectionProps> = ({
       >
         <Image
           src={posterUrl}
-          alt={nameRu}
+          alt={nameRu || "Изображение"}
           placeholder="blur"
           blurDataURL={posterUrl}
           width={0}
