@@ -3,6 +3,8 @@ import { defaultFilters } from "@/shared/consts";
 
 import {
   FiltersType,
+  MovieImages,
+  MovieImagesQuery,
   MovieInfo,
   MovieItems,
   MoviesCollections,
@@ -30,6 +32,14 @@ export const moviesApi = createApi({
   endpoints: (builder) => ({
     getMovie: builder.query<MovieInfo, number>({
       query: (id) => ({ url: `films/${id}`, method: "get" }),
+    }),
+
+    getMovieImages: builder.query<MovieImages, MovieImagesQuery>({
+      query: ({ id, type = "STILL" }) => ({
+        url: `films/${id}/images`,
+        method: "get",
+        params: { type: type },
+      }),
     }),
 
     getMoviesByFilters: builder.query<MovieItems, Partial<FiltersType>>({
@@ -63,4 +73,5 @@ export const {
   useGetMoviesByFiltersQuery,
   useGetMoviesCollectionQuery,
   useGetMoviesPremieresQuery,
+  useGetMovieImagesQuery,
 } = moviesApi;

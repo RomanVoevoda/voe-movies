@@ -95,3 +95,28 @@ interface CountriesInfo {
 interface GenreInfo {
   genre: string;
 }
+
+export interface MovieImagesQuery {
+  id: number;
+  type:
+    | "STILL"
+    | "SHOOTING"
+    | "POSTER"
+    | "FAN_ART"
+    | "PROMO"
+    | "CONCEPT"
+    | "WALLPAPER"
+    | "COVER"
+    | "SCREENSHOT";
+}
+
+export interface MovieImages {
+  total: number;
+  totalPages: number;
+  items: MovieImage[];
+}
+
+interface MovieImage {
+  imageUrl: string;
+  prewievUrl: string;
+}

@@ -3,6 +3,7 @@ export {
   useGetMoviesByFiltersQuery,
   useGetMoviesCollectionQuery,
   useGetMoviesPremieresQuery,
+  useGetMovieImagesQuery,
   MovieCard,
   MovieSection,
   moviesApi,

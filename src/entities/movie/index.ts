@@ -7,4 +7,5 @@ export {
   useGetMoviesByFiltersQuery,
   useGetMoviesCollectionQuery,
   useGetMoviesPremieresQuery,
+  useGetMovieImagesQuery,
 } from "./api/moviesApi";
