@@ -64,3 +64,9 @@ $z-index-modal: 1000;
 $aspect-ratio-poster: 2/3;
 $aspect-ratio-banner: 16/9;
 $aspect-ratio-square: 1/1;
+
+//swiper
+.swiper {
+  --swiper-navigation-color: rgba(255, 255, 255, 1);
+  --swiper-pagination-color: rgba(255, 255, 255, 1);
+}

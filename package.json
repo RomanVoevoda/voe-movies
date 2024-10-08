@@ -53,6 +53,7 @@
     "loki": "^0.35.1",
     "prettier": "3.3.3",
     "storybook": "^8.3.3",
+    "swiper": "^11.1.14",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5"

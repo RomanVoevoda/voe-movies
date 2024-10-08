@@ -116,7 +116,7 @@ export interface MovieImages {
   items: MovieImage[];
 }
 
-interface MovieImage {
+export interface MovieImage {
   imageUrl: string;
   prewievUrl: string;
 }

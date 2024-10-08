@@ -1,4 +1,4 @@
-import { Button, FlexDiv, Icon, TextSlice } from "@/shared/ui";
+import { TextSlice } from "@/shared/ui";
 import React, { FC } from "react";
 
 const MoviesIdPageImagesTitle: FC = () => {
@@ -11,20 +11,6 @@ const MoviesIdPageImagesTitle: FC = () => {
       >
         Кадры из фильма
       </TextSlice>
-      <FlexDiv direction="row_reverse">
-        <Button
-          color="dark_blue"
-          type="text"
-          size="content"
-        >
-          Смотреть все &nbsp;
-          <Icon
-            color="dark_blue"
-            direction="right"
-            size="small"
-          />
-        </Button>
-      </FlexDiv>
     </>
   );
 };
