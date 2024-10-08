@@ -31,7 +31,7 @@ const MoviesCollectionButtons: FC<MoviesCollectionButtonsProps> = ({
           onClick={() => handleButtonClick(collection)}
           key={collection}
         >
-          {collectionsEnum[collection]}
+          {collectionsEnum[collection as keyof typeof collectionsEnum]}
         </Button>
       ))}
     </FlexDiv>

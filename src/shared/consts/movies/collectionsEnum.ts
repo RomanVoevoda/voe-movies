@@ -1,4 +1,4 @@
-export const enum collectionsEnum {
+export enum collectionsEnum {
   TOP_POPULAR_ALL = "Популярные",
   TOP_POPULAR_MOVIES = "Популярные фильмы",
   TOP_250_TV_SHOWS = "Топ 250 сериалов",

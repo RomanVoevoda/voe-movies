@@ -13,7 +13,11 @@ const TypeSelect: React.FC<TypeSelectProps> = ({ options }) => {
   const dispatch = useTypedDispatch();
 
   const handleTypeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filtersSliceActions.setMoviesType(filtersTypesKeysEnum[e.target.value]));
+    dispatch(
+      filtersSliceActions.setMoviesType(
+        filtersTypesKeysEnum[e.target.value as keyof typeof filtersTypesKeysEnum],
+      ),
+    );
   };
 
   return (

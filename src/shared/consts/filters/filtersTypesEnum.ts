@@ -1,4 +1,4 @@
-export const enum filtersTypesEnum {
+export enum filtersTypesEnum {
   "FILM" = "Фильмы",
   "TV_SHOW" = "ТВ Шоу",
   "TV_SERIES" = "Сериалы",
