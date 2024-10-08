@@ -3,4 +3,9 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-start;
+
+  @media screen and (width < 600px) {
+    -moz-column-gap: 5rem !important;
+    column-gap: 5rem !important;
+  }
 }

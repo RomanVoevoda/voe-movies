@@ -29,6 +29,7 @@ const MoviesCollectionButtons: FC<MoviesCollectionButtonsProps> = ({
           type={collection === activeButton ? "contained" : "text"}
           color="dark_blue"
           onClick={() => handleButtonClick(collection)}
+          key={collection}
         >
           {collectionsEnum[collection]}
         </Button>
