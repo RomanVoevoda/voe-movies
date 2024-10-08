@@ -12,7 +12,7 @@ const MoviesList: FC = () => {
   const filters = useTypedSelector((store) => store.filters);
   const { data, isLoading, isError } = useGetMoviesByFiltersQuery(filters);
 
-  const items = data?.items;
+  const items = data?.items ?? [];
 
   return (
     <>
@@ -20,7 +20,7 @@ const MoviesList: FC = () => {
 
       {isError && <h1>Ошибка загрузки</h1>}
 
-      {(!isLoading && items == undefined && <h1>Фильмы не найдены</h1>) ||
+      {(!isLoading && items.length < 1 && !isError && <h1>Фильмы не найдены</h1>) ||
         (data && items != undefined && (
           <>
             <MoviesPagination pagesCount={data.totalPages} />

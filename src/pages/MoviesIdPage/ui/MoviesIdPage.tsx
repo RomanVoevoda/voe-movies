@@ -9,7 +9,6 @@ const MovieIdPage: FC = () => {
     <main className={styles.page}>
       <MoviesIdPageButtons />
       <MoviesIdPageInfo />
-      <MoviesIdPageImages />
     </main>
   );
 };

@@ -4,6 +4,7 @@ import { Button } from "@/shared/ui";
 import { useParams } from "next/navigation";
 
 import React, { FC } from "react";
+import MoviesIdPageImages from "../MoviesIdPageImages/MoviesIdPageImages";
 
 const MoviesIdPageInfo: FC = () => {
   const params = useParams<{ id: string }>();
@@ -22,7 +23,7 @@ const MoviesIdPageInfo: FC = () => {
 
       {isError && <h1>Ошибка загрузки</h1>}
 
-      {(!isLoading && data == undefined && <h1>Фильм не найден</h1>) ||
+      {(!isLoading && data == undefined && !isError && <h1>Фильм не найден</h1>) ||
         (data != undefined && (
           <>
             <MovieSection
@@ -48,6 +49,7 @@ const MoviesIdPageInfo: FC = () => {
               gapColumns={150}
               gapRows={20}
             />
+            <MoviesIdPageImages />
           </>
         ))}
     </>

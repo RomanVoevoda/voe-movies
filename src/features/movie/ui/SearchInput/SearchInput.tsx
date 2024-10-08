@@ -74,6 +74,7 @@ const SearchInput: FC<SearchInputProps> = ({
         size={size}
         type="search"
         value={value}
+        id={placeholder + "1"}
         onChange={handleInputChange}
         placeholder={placeholder}
       />

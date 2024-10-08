@@ -26,13 +26,14 @@ const MoviesIdPageImagesContent: FC = () => {
 
   const { data, isLoading, isError } = useGetMovieImagesQuery({ id: +id, type: "STILL" });
 
-  const items = data?.items;
+  const items = data?.items ?? [];
   return (
     <>
       {isLoading && <h1>Загрузка...</h1>}
 
       {isError && <h1>Ошибка загрузки</h1>}
-      {(!isLoading && items == undefined && <h1>Изображения не найдены</h1>) ||
+
+      {(!isLoading && items.length < 1 && !isError && <h1>Изображения не найдены</h1>) ||
         (data && items != undefined && (
           <>
             <FlexDiv direction="row_reverse">

@@ -11,6 +11,7 @@ const MoviesCollection: FC = () => {
     "TOP_POPULAR_ALL",
     "COMICS_THEME",
     "VAMPIRE_THEME",
+    "CATASTROPHE_THEME",
   ];
   const [collection, setCollection] = useState<MoviesCollections["type"]>(currentCollections[0]);
 
@@ -20,24 +21,27 @@ const MoviesCollection: FC = () => {
     return <h1>Загрузка...</h1>;
   }
 
-  if (isError || data == undefined) {
+  if (isError) {
     return <h1>Ошибка загрузки</h1>;
   }
 
-  const { items } = data;
+  const items = data?.items ?? [];
 
   return (
-    <section
-      aria-label="коллекция фильмов"
-      className={styles.section}
-    >
-      <MoviesCollectionButtons
-        collections={currentCollections}
-        currentCollection={collection}
-        setCurrentCollection={setCollection}
-      />
-      <MovieCollectionCards movies={items} />
-    </section>
+    <>
+      <section
+        aria-label="коллекция фильмов"
+        className={styles.section}
+      >
+        <MoviesCollectionButtons
+          collections={currentCollections}
+          currentCollection={collection}
+          setCurrentCollection={setCollection}
+        />
+        {(!isLoading && items.length < 1 && !isError && <h1>Коллекция не найдена</h1>) ||
+          (data && items != undefined && <MovieCollectionCards movies={items} />)}
+      </section>
+    </>
   );
 };
 

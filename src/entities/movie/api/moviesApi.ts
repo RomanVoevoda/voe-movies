@@ -46,7 +46,7 @@ export const moviesApi = createApi({
       query: (filters) => ({
         url: `films`,
         method: "get",
-        params: { ...defaultFilters, ...filters },
+        params: { ...defaultFilters, ...filters, keyword: localStorage.getItem("keywords") || "" },
       }),
     }),
 
