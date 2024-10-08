@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+
+  @media screen and (width < 600px) {
+    grid-template-columns: auto;
+  }
+
+  &__wrapper {
+    aspect-ratio: $aspect-ratio-square;
+    border-radius: $border-radius-image;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100% !important;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}

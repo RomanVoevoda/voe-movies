@@ -22,7 +22,7 @@ const MoviesIdPageInfo: FC = () => {
 
       {isError && <h1>Ошибка загрузки</h1>}
 
-      {(!isLoading && data == undefined && <h1>Фильмы не найдены</h1>) ||
+      {(!isLoading && data == undefined && <h1>Фильм не найден</h1>) ||
         (data != undefined && (
           <>
             <MovieSection
