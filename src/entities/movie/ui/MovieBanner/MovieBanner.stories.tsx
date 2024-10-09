@@ -23,7 +23,7 @@ export const Banner: Story = {
     announcement: "УЖЕ В КИНО",
     button: (
       <Button
-        type="contained"
+        variant="contained"
         color="pink"
       >
         Смотреть

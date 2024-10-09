@@ -1,5 +1,5 @@
-import { moviesApi } from "@/entities";
+import { baseApi } from "../rtkQuery/baseApi";
 
 export interface Store {
-  [moviesApi.reducerPath]: ReturnType<typeof moviesApi.reducer>;
+  [baseApi.reducerPath]: ReturnType<typeof baseApi.reducer>;
 }

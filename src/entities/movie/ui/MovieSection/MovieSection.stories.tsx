@@ -30,13 +30,13 @@ export const PreviewSection: Story = {
     gapRows: 20,
     buttons: [
       <Button
-        type="contained"
+        variant="contained"
         color="pink"
       >
         Смотреть
       </Button>,
       <Button
-        type="outlined"
+        variant="outlined"
         color="pink"
       >
         В избранное
@@ -62,7 +62,7 @@ export const FullSection: Story = {
     gapRows: 20,
     buttons: [
       <Button
-        type="contained"
+        variant="contained"
         color="pink"
       >
         В избранное
