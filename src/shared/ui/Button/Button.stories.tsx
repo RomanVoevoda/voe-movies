@@ -16,7 +16,7 @@ const children = "Button";
 
 export const ContainedButton: Story = {
   args: {
-    type: "contained",
+    variant: "contained",
     color: "pink",
     children,
   },
@@ -24,7 +24,7 @@ export const ContainedButton: Story = {
 
 export const OutlinedButton: Story = {
   args: {
-    type: "outlined",
+    variant: "outlined",
     color: "dark_blue",
     children,
   },
@@ -32,7 +32,7 @@ export const OutlinedButton: Story = {
 
 export const TextButton: Story = {
   args: {
-    type: "text",
+    variant: "text",
     color: "dark_blue",
     children,
   },
@@ -40,7 +40,7 @@ export const TextButton: Story = {
 
 export const PaginationButton: Story = {
   args: {
-    type: "text",
+    variant: "text",
     color: "dark_blue",
     size: "content",
     children: "1",

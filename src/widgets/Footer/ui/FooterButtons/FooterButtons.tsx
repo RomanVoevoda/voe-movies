@@ -16,9 +16,8 @@ const FooterButtons: FC = () => {
         button={
           <Button
             color="white"
-            type="text"
+            variant="text"
             size="content"
-            padding={0}
           >
             Главная
           </Button>
@@ -29,9 +28,8 @@ const FooterButtons: FC = () => {
         button={
           <Button
             color="white"
-            type="text"
+            variant="text"
             size="content"
-            padding={0}
           >
             Популярные фильмы
           </Button>
@@ -42,9 +40,8 @@ const FooterButtons: FC = () => {
         button={
           <Button
             color="white"
-            type="text"
+            variant="text"
             size="content"
-            padding={0}
           >
             Популярные сериалы
           </Button>

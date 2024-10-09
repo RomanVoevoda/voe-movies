@@ -13,7 +13,7 @@ const ResetButton: React.FC = () => {
 
   return (
     <Button
-      type="contained"
+      variant="contained"
       color="dark_blue"
       onClick={handleReset}
     >

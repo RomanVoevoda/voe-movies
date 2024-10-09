@@ -29,7 +29,7 @@ const Banner: FC = () => {
           id={items[0].kinopoiskId}
           button={
             <Button
-              type="contained"
+              variant="contained"
               color="pink"
             >
               Смотреть

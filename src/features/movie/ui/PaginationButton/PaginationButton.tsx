@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Button } from "@/shared/ui";
 import { useTypedDispatch } from "@/shared/hooks";
 import { filtersSliceActions } from "@/entities";
+import styles from "./PaginationButton.module.scss";
 
 interface PaginationButtonProps {
   page: number;
@@ -19,10 +20,10 @@ const PaginationButton: FC<PaginationButtonProps> = ({ page, isActive }) => {
   return (
     <Button
       onClick={handleClick}
-      type={isActive ? "contained" : "text"}
-      padding={5}
+      variant={isActive ? "contained" : "text"}
       color="dark_blue"
       size="content"
+      extraClass={styles.button}
     >
       {page}
     </Button>

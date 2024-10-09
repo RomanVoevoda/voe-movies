@@ -35,7 +35,7 @@ const MoviesIdPageInfo: FC = () => {
               ratingKinopoisk={data.ratingKinopoisk || 0}
               buttons={[
                 <Button
-                  type="contained"
+                  variant="contained"
                   color="pink"
                   key={Date.now() + "В избранное"}
                 >

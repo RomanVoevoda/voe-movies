@@ -38,17 +38,17 @@ describe("Button", () => {
     });
   });
 
-  describe("type", () => {
+  describe("variant", () => {
     test("contained", () => {
-      render({ type: "contained", children }, "button_contained");
+      render({ variant: "contained", children }, "button_contained");
     });
 
     test("outlined", () => {
-      render({ type: "outlined", children }, "button_outlined");
+      render({ variant: "outlined", children }, "button_outlined");
     });
 
     test("text", () => {
-      render({ type: "text", children }, "button_text");
+      render({ variant: "text", children }, "button_text");
     });
   });
 
@@ -73,6 +73,12 @@ describe("Button", () => {
       render({ submit: true, children });
       const component = screen.getByTestId("Button");
       expect(component).toHaveAttribute("type", "submit");
+    });
+  });
+
+  describe("extraClass", () => {
+    test("extraClass", () => {
+      render({ extraClass: "class", children }, "class");
     });
   });
 

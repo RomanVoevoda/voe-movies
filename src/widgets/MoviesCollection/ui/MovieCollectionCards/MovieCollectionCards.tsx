@@ -28,10 +28,9 @@ const MovieCollectionCards: FC<MovieCollectionCardsProps> = ({ movies }) => {
         route={routesEnum.movies}
         button={
           <Button
-            type="text"
+            variant="text"
             color="dark_blue"
             size="content"
-            padding={0}
           >
             Смотреть все &nbsp;
             <Icon

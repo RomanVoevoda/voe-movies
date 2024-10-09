@@ -12,7 +12,7 @@ const MoviesPageTitle: FC = () => {
           route={routesEnum.home}
           button={
             <Button
-              type="text"
+              variant="text"
               color="gray"
               size="content"
             >

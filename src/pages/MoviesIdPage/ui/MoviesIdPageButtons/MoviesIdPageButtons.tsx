@@ -12,7 +12,7 @@ const MoviesIdPageButtons: FC = () => {
         button={
           <Button
             color="gray"
-            type="text"
+            variant="text"
             size="content"
           >
             <Icon
@@ -30,7 +30,7 @@ const MoviesIdPageButtons: FC = () => {
         button={
           <Button
             color="gray"
-            type="text"
+            variant="text"
             size="content"
           >
             <Icon

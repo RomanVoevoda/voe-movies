@@ -42,7 +42,7 @@ const MoviesList: FC = () => {
                       key={Date.now() + "Смотреть"}
                     />,
                     <Button
-                      type="text"
+                      variant="text"
                       color="pink"
                       key={Date.now() + "В избранное"}
                     >

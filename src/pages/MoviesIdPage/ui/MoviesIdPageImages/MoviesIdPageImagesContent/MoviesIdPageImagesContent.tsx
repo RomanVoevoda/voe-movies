@@ -39,7 +39,7 @@ const MoviesIdPageImagesContent: FC = () => {
             <FlexDiv direction="row_reverse">
               <Button
                 color="dark_blue"
-                type="text"
+                variant="text"
                 size="content"
                 onClick={handleModalState}
               >

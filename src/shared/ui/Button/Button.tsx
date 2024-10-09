@@ -3,37 +3,37 @@ import styles from "./Button.module.scss";
 import classNames from "classnames";
 
 export interface ButtonProps {
-  type?: "contained" | "outlined" | "text";
+  variant?: "contained" | "outlined" | "text";
   color?: "pink" | "dark_blue" | "white" | "gray";
   size?: "content" | "normal";
   submit?: boolean;
   onClick?: () => void;
+  extraClass?: string;
   children: ReactNode;
-  padding?: number;
 }
 
 const Button: FC<ButtonProps> = ({
-  type = "contained",
+  variant = "contained",
   color = "pink",
-  submit = false,
   size = "normal",
-  onClick,
   children,
-  padding,
+  submit,
+  extraClass,
+  ...props
 }) => {
   const buttonClass = classNames(styles.button, {
-    [styles[`button_${type}`]]: true,
+    [styles[`button_${variant}`]]: true,
     [styles[`button_${size}`]]: true,
-    [styles[`button_${type}_${color}`]]: true,
+    [styles[`button_${variant}_${color}`]]: true,
+    ...(extraClass ? { [extraClass]: true } : {}),
   });
 
   return (
     <button
       className={buttonClass}
-      onClick={onClick}
-      type={submit ? "submit" : "button"}
       data-testid="Button"
-      style={{ padding: `${padding}px` }}
+      type={submit ? "submit" : "button"}
+      {...props}
     >
       {children}
     </button>

@@ -26,7 +26,7 @@ const MoviesCollectionButtons: FC<MoviesCollectionButtonsProps> = ({
     <FlexDiv extraClass={styles.container}>
       {collections.map((collection) => (
         <Button
-          type={collection === activeButton ? "contained" : "text"}
+          variant={collection === activeButton ? "contained" : "text"}
           color="dark_blue"
           onClick={() => handleButtonClick(collection)}
           key={collection}
