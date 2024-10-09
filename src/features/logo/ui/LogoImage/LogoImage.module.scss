@@ -1,0 +1,8 @@
+.image {
+  max-width: 14.625rem;
+  max-height: 3.6875rem;
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+}

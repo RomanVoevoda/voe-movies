@@ -1,9 +1,7 @@
 "use client";
 import React, { FC, useState } from "react";
 import styles from "./Header.module.scss";
-import Image from "next/image";
-import Logo from "@/shared/assets/images/logo.webp";
-import { SearchInput } from "@/features";
+import { LogoImage, SearchInput } from "@/features";
 import { FlexDiv, Icon } from "@/shared/ui";
 import classNames from "classnames";
 
@@ -25,14 +23,7 @@ const Header: FC = () => {
         extraClass={styles.header__main}
         wrap="nowrap"
       >
-        <Image
-          alt="logo"
-          src={Logo}
-          width={0}
-          height={0}
-          className={styles.header__logo}
-          priority
-        />
+        <LogoImage />
 
         <FlexDiv
           justify="start"
