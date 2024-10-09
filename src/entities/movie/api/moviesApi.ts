@@ -1,4 +1,4 @@
-import { axiosBaseQuery } from "@/shared/config";
+import { baseApi } from "@/shared/config";
 import { defaultFilters } from "@/shared/consts";
 
 import {
@@ -10,25 +10,8 @@ import {
   MoviesCollections,
   MoviesPremieres,
 } from "@/shared/model";
-import { createApi } from "@reduxjs/toolkit/query/react";
 
-if (!process.env.NEXT_PUBLIC_BASE_URL) {
-  throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
-}
-
-if (!process.env.NEXT_PUBLIC_API_KEY) {
-  throw new Error("NEXT_PUBLIC_API_KEY is not defined");
-}
-
-export const moviesApi = createApi({
-  reducerPath: "movieApi",
-  baseQuery: axiosBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
-    headers: {
-      "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY,
-    },
-  }),
-
+const moviesApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getMovie: builder.query<MovieInfo, number>({
       query: (id) => ({ url: `films/${id}`, method: "get" }),

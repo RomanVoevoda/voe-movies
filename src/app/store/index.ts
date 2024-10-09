@@ -1,10 +1,9 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { rootReducer } from "./reducers/rootReducer";
-import { Store } from "@/shared/config";
-import { moviesApi } from "@/entities";
+import { baseApi, Store } from "@/shared/config";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
-const middleware = [moviesApi.middleware];
+const middleware = [baseApi.middleware];
 
 export const createReduxStore = (initialState?: Store) => {
   return configureStore({
