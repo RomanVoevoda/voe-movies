@@ -19,9 +19,7 @@ const Input: FC<InputProps> = ({
   id,
   label,
   ariaLabel,
-  placeholder,
-  onChange,
-  value,
+  ...props
 }) => {
   const inputClass = classNames({
     [styles["input"]]: true,
@@ -42,12 +40,10 @@ const Input: FC<InputProps> = ({
         type={type}
         id={id}
         name={id}
-        placeholder={placeholder}
-        aria-label={ariaLabel}
         className={inputClass}
         data-testid="Input"
-        onChange={onChange}
-        value={value}
+        aria-label={ariaLabel}
+        {...props}
       />
     </>
   );
