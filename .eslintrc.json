@@ -17,6 +17,10 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
+
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",

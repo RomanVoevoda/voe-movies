@@ -23,7 +23,7 @@ const filtersSlice = createSlice({
       state.ratingFrom = action.payload;
     },
 
-    setDefault(state) {
+    setDefault() {
       return { ...defaultFilters };
     },
 

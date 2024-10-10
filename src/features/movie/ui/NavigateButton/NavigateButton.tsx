@@ -15,18 +15,27 @@ interface NavigateButtonProps {
 const NavigateButton: FC<NavigateButtonProps> = ({ route = "/", button, id, type = "push" }) => {
   const router = useRouter();
 
-  const clickPushHandler = () => {
-    router.push(id ? route.replace(":id", `${id}`) : route);
+  const handleNavigation = () => {
+    if (type === "push") {
+      router.push(id ? route.replace(":id", `${id}`) : route);
+    } else {
+      router.back();
+    }
   };
 
-  const clickBackHandler = () => {
-    router.back();
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleNavigation();
+    }
   };
 
   return (
     <span
       className={styles.container}
-      onClick={type === "push" ? clickPushHandler : clickBackHandler}
+      onClick={handleNavigation}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
       role="link"
     >
       {button}

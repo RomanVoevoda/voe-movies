@@ -1,5 +1,7 @@
 export function changeBodyScrolling() {
-  document.body.style.overflowY === "hidden"
-    ? (document.body.style.overflowY = "scroll")
-    : (document.body.style.overflowY = "hidden");
+  if (document.body.style.overflowY === "hidden") {
+    document.body.style.overflowY = "scroll";
+  } else {
+    document.body.style.overflowY = "hidden";
+  }
 }

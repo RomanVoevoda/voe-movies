@@ -11,10 +11,18 @@ const MovieCardSmall: FC<MovieCardProps> = ({
   ratingKinopoisk,
   onClick,
 }) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter" || event.key === " ") {
+      onClick?.();
+      event.preventDefault();
+    }
+  };
+
   return (
     <article
       className={styles.card}
       onClick={onClick}
+      onKeyDown={handleKeyDown}
       data-testid="MovieCard"
     >
       <FlexDiv

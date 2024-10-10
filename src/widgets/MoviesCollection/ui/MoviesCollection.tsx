@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./MoviesCollection.module.scss";
 import MoviesCollectionButtons from "./MoviesCollectionButtons/MoviesCollectionButtons";
 import { MoviesCollections } from "@/shared/model";

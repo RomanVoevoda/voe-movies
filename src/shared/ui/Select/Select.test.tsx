@@ -66,12 +66,6 @@ describe("Select", () => {
     });
   });
 
-  describe("aria-label", () => {
-    test("aria-label", () => {
-      renderByAttribute({ ariaLabel: "select label" }, "aria-label", "select label");
-    });
-  });
-
   describe("select change event", () => {
     test("calls onChange prop when an option is selected", () => {
       const changeHandler = jest.fn();

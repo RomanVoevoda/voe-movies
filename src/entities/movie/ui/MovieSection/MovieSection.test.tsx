@@ -16,7 +16,7 @@ describe("MovieSection", () => {
     country: "Страна",
     gapColumns: 10,
     gapRows: 10,
-    buttons: [<Button>Кнопка</Button>],
+    buttons: [<Button key="Кнопка">Кнопка</Button>],
   };
 
   test("render MovieSection full", () => {

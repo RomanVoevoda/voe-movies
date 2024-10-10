@@ -66,6 +66,12 @@ const Select: FC<SelectProps> = ({
     setIsOpen((prev) => !prev);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleSelectClick();
+    }
+  };
+
   const selectClass = classNames({
     [styles[`select`]]: true,
     [styles[`select_${size}`]]: size,
@@ -94,7 +100,8 @@ const Select: FC<SelectProps> = ({
         aria-expanded={isOpen}
         className={selectClass}
         onClick={handleSelectClick}
-        role="select"
+        onKeyDown={handleKeyDown}
+        role="button"
         tabIndex={0}
         ref={rootRef}
         data-testid="Select"
@@ -119,8 +126,11 @@ const Select: FC<SelectProps> = ({
               <div
                 key={option}
                 role="option"
+                aria-selected={option === selectedOption}
+                tabIndex={0}
                 className={styles.select__option}
                 onClick={() => handleOptionClick(option)}
+                onKeyDown={(e) => e.key === "Enter" && handleOptionClick(option)}
                 data-testid={`Option ${option}`}
               >
                 <p>{option}</p>

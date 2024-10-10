@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import styles from "./MovieBanner.module.scss";
-import { Button, FlexDiv, TextSlice } from "@/shared/ui";
+import { FlexDiv, TextSlice } from "@/shared/ui";
 import Image from "next/image";
 
 interface MovieBannerProps {

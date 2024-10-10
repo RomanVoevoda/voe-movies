@@ -41,6 +41,7 @@ const Header: FC = () => {
             type="search"
             color="white"
             size="big"
+            ariaLabel="Открыть поиск"
             interactive
             onClick={dropdownHandler}
           />

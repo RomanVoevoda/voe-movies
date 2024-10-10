@@ -32,12 +32,14 @@ export const PreviewSection: Story = {
       <Button
         variant="contained"
         color="pink"
+        key="Смотреть"
       >
         Смотреть
       </Button>,
       <Button
         variant="outlined"
         color="pink"
+        key="В избранное"
       >
         В избранное
       </Button>,
@@ -64,6 +66,7 @@ export const FullSection: Story = {
       <Button
         variant="contained"
         color="pink"
+        key="В избранное"
       >
         В избранное
       </Button>,
